@@ -1,0 +1,8 @@
+fastapi
+pandas
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+Faker==22.6.0
+json-logic-qubit

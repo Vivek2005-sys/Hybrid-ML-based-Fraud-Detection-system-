@@ -1,0 +1,501 @@
+id,first_name,last_name,email,phone_number,date_of_birth,primary_city,primary_state,account_creation_date,persona_type,usual_login_device,is_vpn_user
+1,Sneha,Deshmukh,sneha.deshmukh872@example.com,+91 7478921939,1962-09-13,Bengaluru,Karnataka,2024-03-15 15:49:51,Student,iPhone 15,False
+2,Riya,Bose,riya.bose582@example.com,+91 6633044721,1985-03-28,Bengaluru,Karnataka,2023-03-08 15:49:51,Daily Spender,Windows PC,False
+3,Riya,Menon,riya.menon508@example.com,+91 6359570178,1970-05-12,Pune,Maharashtra,2023-04-16 15:49:51,Daily Spender,iPhone 15,False
+4,Kavya,Deshmukh,kavya.deshmukh313@example.com,+91 6277381097,2006-12-07,Chennai,Tamil Nadu,2024-12-28 15:49:51,Daily Spender,iPhone 15,False
+5,Riya,Singh,riya.singh889@example.com,+91 9542940930,2006-11-17,Hyderabad,Telangana,2026-05-05 15:49:51,Daily Spender,MacBook Air,False
+6,Aditya,Menon,aditya.menon524@example.com,+91 6824912265,1994-06-02,Hyderabad,Telangana,2023-10-20 15:49:51,Daily Spender,iPhone 15,False
+7,Sneha,Menon,sneha.menon947@example.com,+91 7800734358,1995-09-12,Chennai,Tamil Nadu,2025-06-03 15:49:51,Student,Samsung Galaxy S23,False
+8,Amit,Menon,amit.menon472@example.com,+91 8236202249,1985-03-19,Surat,Gujarat,2025-10-03 15:49:51,Daily Spender,iPhone 15,False
+9,Kavya,Deshmukh,kavya.deshmukh814@example.com,+91 8506298494,1951-05-09,Surat,Gujarat,2024-12-09 15:49:51,Daily Spender,iPhone 13,False
+10,Kavya,Nair,kavya.nair254@example.com,+91 8748794435,1972-06-12,Mumbai,Maharashtra,2024-01-13 15:49:51,Daily Spender,Samsung Galaxy S23,True
+11,Karan,Das,karan.das928@example.com,+91 8740247235,1971-02-08,Mumbai,Maharashtra,2023-01-19 15:49:51,Student,Windows PC,False
+12,Priya,Menon,priya.menon408@example.com,+91 6476790389,2003-10-14,Kolkata,West Bengal,2026-07-03 15:49:51,Daily Spender,Samsung Galaxy S23,False
+13,Vikram,Gupta,vikram.gupta809@example.com,+91 6533136603,1992-07-09,Kolkata,West Bengal,2024-11-18 15:49:51,High Roller,iPhone 13,False
+14,Rahul,Sharma,rahul.sharma938@example.com,+91 8389712196,2001-07-28,Surat,Gujarat,2023-04-01 15:49:51,High Roller,iPhone 15,False
+15,Aarav,Nair,aarav.nair17@example.com,+91 8702678625,1981-06-14,Pune,Maharashtra,2023-10-04 15:49:51,Daily Spender,Samsung Galaxy S23,False
+16,Ananya,Rao,ananya.rao248@example.com,+91 9286168684,1976-11-16,Pune,Maharashtra,2023-08-12 15:49:51,High Roller,iPhone 15,False
+17,Ananya,Iyer,ananya.iyer280@example.com,+91 8528704377,1970-03-22,Bengaluru,Karnataka,2026-03-30 15:49:51,Daily Spender,iPhone 15,False
+18,Rohan,Verma,rohan.verma112@example.com,+91 7303117735,1993-08-04,Pune,Maharashtra,2023-02-02 15:49:51,High Roller,iPhone 15,False
+19,Pooja,Nair,pooja.nair31@example.com,+91 8432695724,1978-06-04,Hyderabad,Telangana,2023-05-28 15:49:51,Student,Windows PC,False
+20,Rahul,Chauhan,rahul.chauhan76@example.com,+91 6126486233,1968-05-19,Pune,Maharashtra,2023-08-23 15:49:51,Daily Spender,Samsung Galaxy S23,False
+21,Varun,Deshmukh,varun.deshmukh864@example.com,+91 7442260731,1947-05-03,Mumbai,Maharashtra,2026-05-31 15:49:51,Student,MacBook Air,False
+22,Rohan,Deshmukh,rohan.deshmukh283@example.com,+91 8488947954,2007-03-18,Jaipur,Rajasthan,2024-01-08 15:49:51,Daily Spender,Samsung Galaxy S23,False
+23,Kavya,Reddy,kavya.reddy282@example.com,+91 9090326199,1962-01-24,Mumbai,Maharashtra,2023-10-30 15:49:51,Daily Spender,MacBook Air,True
+24,Rohan,Menon,rohan.menon889@example.com,+91 8693280251,1958-02-04,Surat,Gujarat,2025-01-01 15:49:51,Daily Spender,Samsung Galaxy S23,False
+25,Rahul,Chauhan,rahul.chauhan372@example.com,+91 8774441960,1989-12-10,Delhi,Delhi,2024-01-17 15:49:51,Daily Spender,iPhone 15,False
+26,Varun,Deshmukh,varun.deshmukh772@example.com,+91 8752928468,1971-09-05,Jaipur,Rajasthan,2023-09-13 15:49:51,Daily Spender,iPhone 13,False
+27,Rohan,Deshmukh,rohan.deshmukh753@example.com,+91 7174800365,1975-10-13,Ahmedabad,Gujarat,2024-01-06 15:49:51,Daily Spender,Samsung Galaxy S23,False
+28,Pooja,Gupta,pooja.gupta607@example.com,+91 8040278025,1969-06-04,Delhi,Delhi,2025-09-09 15:49:51,Daily Spender,MacBook Air,True
+29,Rohan,Iyer,rohan.iyer166@example.com,+91 7406261518,2000-11-09,Jaipur,Rajasthan,2023-06-14 15:49:51,Daily Spender,Samsung Galaxy S23,False
+30,Neha,Iyer,neha.iyer686@example.com,+91 7769129363,2005-02-26,Delhi,Delhi,2023-08-15 15:49:51,Daily Spender,Samsung Galaxy S23,False
+31,Sneha,Menon,sneha.menon267@example.com,+91 6344623702,1967-07-05,Surat,Gujarat,2025-04-29 15:49:51,Daily Spender,MacBook Air,True
+32,Amit,Bose,amit.bose558@example.com,+91 7672994525,1975-02-17,Kolkata,West Bengal,2025-12-17 15:49:51,Student,iPhone 15,False
+33,Amit,Chauhan,amit.chauhan925@example.com,+91 7415732845,1962-01-05,Pune,Maharashtra,2023-10-09 15:49:51,Daily Spender,MacBook Air,False
+34,Sneha,Iyer,sneha.iyer288@example.com,+91 8421147421,1991-11-16,Pune,Maharashtra,2025-10-06 15:49:51,Student,Samsung Galaxy S23,False
+35,Vikram,Bose,vikram.bose400@example.com,+91 8771789806,1981-07-31,Ahmedabad,Gujarat,2022-11-24 15:49:51,Daily Spender,MacBook Air,True
+36,Amit,Patel,amit.patel130@example.com,+91 6322234291,1971-08-16,Kolkata,West Bengal,2023-11-09 15:49:51,Daily Spender,Windows PC,False
+37,Riya,Sharma,riya.sharma120@example.com,+91 7271704658,1951-05-18,Chennai,Tamil Nadu,2024-03-09 15:49:51,Daily Spender,MacBook Air,False
+38,Rahul,Deshmukh,rahul.deshmukh476@example.com,+91 9880223757,1963-01-17,Surat,Gujarat,2024-04-22 15:49:51,Daily Spender,Samsung Galaxy S23,False
+39,Amit,Verma,amit.verma584@example.com,+91 7340592528,1966-07-11,Chennai,Tamil Nadu,2025-08-30 15:49:51,Daily Spender,Samsung Galaxy S23,False
+40,Varun,Deshmukh,varun.deshmukh760@example.com,+91 9957864876,1959-09-02,Kolkata,West Bengal,2025-05-04 15:49:51,Student,MacBook Air,False
+41,Vikram,Iyer,vikram.iyer802@example.com,+91 7304392705,1977-02-06,Delhi,Delhi,2022-09-24 15:49:51,Student,Windows PC,False
+42,Amit,Singh,amit.singh889@example.com,+91 8274235374,1955-04-30,Ahmedabad,Gujarat,2026-07-22 15:49:51,Student,Samsung Galaxy S23,True
+43,Aditya,Menon,aditya.menon135@example.com,+91 9107176233,1997-05-10,Mumbai,Maharashtra,2023-05-15 15:49:51,High Roller,iPhone 13,False
+44,Sneha,Bose,sneha.bose932@example.com,+91 8333794108,2006-02-21,Chennai,Tamil Nadu,2025-02-16 15:49:51,Student,MacBook Air,False
+45,Pooja,Das,pooja.das317@example.com,+91 7297164158,1964-10-30,Mumbai,Maharashtra,2023-03-02 15:49:51,Daily Spender,Samsung Galaxy S23,False
+46,Aditya,Joshi,aditya.joshi453@example.com,+91 9210808334,1946-04-20,Ahmedabad,Gujarat,2023-01-13 15:49:51,High Roller,Samsung Galaxy S23,False
+47,Kavya,Joshi,kavya.joshi870@example.com,+91 6194875019,1951-07-27,Delhi,Delhi,2023-11-26 15:49:51,Daily Spender,Windows PC,False
+48,Neha,Chauhan,neha.chauhan88@example.com,+91 6143662662,1994-11-29,Bengaluru,Karnataka,2026-03-18 15:49:51,Daily Spender,Samsung Galaxy S23,False
+49,Ananya,Sharma,ananya.sharma581@example.com,+91 8005172327,1995-01-11,Hyderabad,Telangana,2022-09-13 15:49:51,Student,Windows PC,False
+50,Kavya,Patel,kavya.patel28@example.com,+91 6944907287,1977-11-26,Hyderabad,Telangana,2025-08-25 15:49:51,Student,Samsung Galaxy S23,False
+51,Rohan,Iyer,rohan.iyer907@example.com,+91 7192297728,1993-12-02,Mumbai,Maharashtra,2025-03-17 15:49:51,Daily Spender,MacBook Air,False
+52,Ananya,Menon,ananya.menon891@example.com,+91 9567941224,1951-04-15,Bengaluru,Karnataka,2026-06-06 15:49:51,Daily Spender,Samsung Galaxy S23,False
+53,Pooja,Nair,pooja.nair348@example.com,+91 9237281440,2002-11-09,Chennai,Tamil Nadu,2023-03-17 15:49:51,Student,Samsung Galaxy S23,False
+54,Neha,Nair,neha.nair604@example.com,+91 8906066042,1985-04-07,Surat,Gujarat,2024-07-17 15:49:51,Daily Spender,iPhone 13,False
+55,Pooja,Nair,pooja.nair77@example.com,+91 9708878677,1983-12-04,Jaipur,Rajasthan,2024-10-06 15:49:51,Daily Spender,iPhone 15,False
+56,Amit,Chauhan,amit.chauhan726@example.com,+91 7191292617,1963-02-06,Bengaluru,Karnataka,2023-10-11 15:49:51,Daily Spender,iPhone 13,True
+57,Rohan,Singh,rohan.singh585@example.com,+91 8231325406,1970-10-15,Delhi,Delhi,2024-06-05 15:49:51,Daily Spender,iPhone 15,False
+58,Riya,Sharma,riya.sharma641@example.com,+91 6348408599,1951-05-20,Jaipur,Rajasthan,2024-03-25 15:49:51,Student,Samsung Galaxy S23,False
+59,Neha,Deshmukh,neha.deshmukh289@example.com,+91 6241712806,1962-10-30,Surat,Gujarat,2023-10-10 15:49:51,Daily Spender,Windows PC,False
+60,Aarav,Patel,aarav.patel918@example.com,+91 6394761134,1974-02-26,Kolkata,West Bengal,2024-04-01 15:49:51,Student,Windows PC,False
+61,Varun,Singh,varun.singh929@example.com,+91 6281140073,1968-08-11,Mumbai,Maharashtra,2026-06-04 15:49:51,Daily Spender,iPhone 15,False
+62,Kavya,Reddy,kavya.reddy614@example.com,+91 9918688536,2003-09-06,Pune,Maharashtra,2025-02-28 15:49:51,Daily Spender,Windows PC,False
+63,Priya,Nair,priya.nair570@example.com,+91 7123365943,1990-01-16,Delhi,Delhi,2026-02-06 15:49:51,Daily Spender,iPhone 15,False
+64,Neha,Gupta,neha.gupta545@example.com,+91 8756390539,1961-02-10,Delhi,Delhi,2025-01-17 15:49:51,Student,MacBook Air,True
+65,Aarav,Rao,aarav.rao817@example.com,+91 9229335486,1969-05-11,Chennai,Tamil Nadu,2026-05-05 15:49:51,Daily Spender,Windows PC,False
+66,Rohan,Sharma,rohan.sharma127@example.com,+91 9427548482,1973-07-21,Bengaluru,Karnataka,2026-06-30 15:49:51,Daily Spender,Samsung Galaxy S23,False
+67,Riya,Das,riya.das801@example.com,+91 6149224195,1983-08-07,Ahmedabad,Gujarat,2023-08-11 15:49:51,Student,Windows PC,False
+68,Varun,Chauhan,varun.chauhan530@example.com,+91 8876476297,1977-08-02,Surat,Gujarat,2025-12-30 15:49:51,High Roller,iPhone 15,False
+69,Neha,Verma,neha.verma652@example.com,+91 8436546946,1998-09-01,Bengaluru,Karnataka,2026-05-13 15:49:51,Daily Spender,Samsung Galaxy S23,False
+70,Karan,Nair,karan.nair778@example.com,+91 8469202675,1965-08-12,Hyderabad,Telangana,2024-06-06 15:49:51,Student,Samsung Galaxy S23,False
+71,Priya,Verma,priya.verma892@example.com,+91 9072446297,1977-07-28,Delhi,Delhi,2024-10-08 15:49:51,High Roller,Windows PC,True
+72,Karan,Verma,karan.verma529@example.com,+91 7845106855,1956-06-10,Delhi,Delhi,2023-11-14 15:49:51,Daily Spender,MacBook Air,False
+73,Priya,Reddy,priya.reddy720@example.com,+91 7754894994,1964-07-15,Bengaluru,Karnataka,2025-11-03 15:49:51,Student,Windows PC,False
+74,Rohan,Nair,rohan.nair922@example.com,+91 9195161472,1993-05-06,Jaipur,Rajasthan,2025-09-04 15:49:51,Daily Spender,Windows PC,False
+75,Neha,Menon,neha.menon979@example.com,+91 8048964606,2001-01-11,Delhi,Delhi,2023-05-29 15:49:51,High Roller,MacBook Air,False
+76,Ananya,Joshi,ananya.joshi150@example.com,+91 8052533726,1984-01-01,Hyderabad,Telangana,2026-06-09 15:49:51,Student,iPhone 13,False
+77,Kavya,Bose,kavya.bose457@example.com,+91 8419300925,1970-06-26,Mumbai,Maharashtra,2025-05-20 15:49:51,Daily Spender,Windows PC,False
+78,Pooja,Rao,pooja.rao661@example.com,+91 7273744019,1982-02-24,Kolkata,West Bengal,2025-08-05 15:49:51,Daily Spender,Samsung Galaxy S23,True
+79,Kavya,Iyer,kavya.iyer957@example.com,+91 7819376135,2001-01-08,Surat,Gujarat,2023-11-18 15:49:51,Daily Spender,MacBook Air,False
+80,Amit,Nair,amit.nair362@example.com,+91 8587077112,1951-12-18,Chennai,Tamil Nadu,2026-05-28 15:49:51,Student,iPhone 13,False
+81,Neha,Sharma,neha.sharma390@example.com,+91 9552695467,1950-07-06,Delhi,Delhi,2023-09-10 15:49:51,Student,Windows PC,False
+82,Sneha,Das,sneha.das63@example.com,+91 9816722453,2002-10-08,Jaipur,Rajasthan,2025-03-03 15:49:51,Daily Spender,MacBook Air,False
+83,Aarav,Iyer,aarav.iyer483@example.com,+91 9234914292,1965-03-20,Ahmedabad,Gujarat,2022-11-18 15:49:51,Student,iPhone 15,False
+84,Ananya,Sharma,ananya.sharma829@example.com,+91 6394802468,1966-02-19,Chennai,Tamil Nadu,2025-04-12 15:49:51,High Roller,Windows PC,False
+85,Sneha,Patel,sneha.patel239@example.com,+91 9205271920,1972-07-13,Ahmedabad,Gujarat,2023-04-28 15:49:51,Daily Spender,iPhone 13,False
+86,Riya,Patel,riya.patel987@example.com,+91 7929568736,1957-02-22,Jaipur,Rajasthan,2023-01-17 15:49:51,Student,iPhone 13,False
+87,Riya,Deshmukh,riya.deshmukh630@example.com,+91 6996553774,1982-06-05,Jaipur,Rajasthan,2026-01-11 15:49:51,Daily Spender,Samsung Galaxy S23,False
+88,Ananya,Gupta,ananya.gupta598@example.com,+91 8432696808,2000-03-21,Mumbai,Maharashtra,2023-05-07 15:49:51,Student,MacBook Air,False
+89,Varun,Nair,varun.nair550@example.com,+91 9235971461,1972-02-24,Delhi,Delhi,2025-07-13 15:49:51,Student,MacBook Air,True
+90,Aarav,Deshmukh,aarav.deshmukh632@example.com,+91 9084315026,1977-11-11,Kolkata,West Bengal,2026-07-23 15:49:51,Daily Spender,MacBook Air,False
+91,Aditya,Reddy,aditya.reddy266@example.com,+91 7109434111,2002-01-20,Surat,Gujarat,2023-11-04 15:49:51,Daily Spender,Windows PC,True
+92,Sneha,Menon,sneha.menon39@example.com,+91 8600561063,1973-02-19,Kolkata,West Bengal,2025-01-31 15:49:51,Daily Spender,MacBook Air,True
+93,Riya,Iyer,riya.iyer443@example.com,+91 6910448192,1962-03-14,Hyderabad,Telangana,2026-08-02 15:49:51,Daily Spender,MacBook Air,False
+94,Amit,Chauhan,amit.chauhan474@example.com,+91 9257185136,1969-08-24,Pune,Maharashtra,2023-03-31 15:49:51,Student,iPhone 15,False
+95,Vikram,Deshmukh,vikram.deshmukh730@example.com,+91 8189687994,1984-05-10,Pune,Maharashtra,2025-02-25 15:49:51,Student,MacBook Air,False
+96,Karan,Menon,karan.menon15@example.com,+91 6095413368,1977-07-03,Chennai,Tamil Nadu,2024-07-20 15:49:51,Daily Spender,Samsung Galaxy S23,False
+97,Kavya,Singh,kavya.singh420@example.com,+91 8451107791,1987-07-30,Pune,Maharashtra,2025-03-17 15:49:51,Student,iPhone 15,False
+98,Rohan,Nair,rohan.nair279@example.com,+91 6951557863,1967-10-21,Bengaluru,Karnataka,2023-10-14 15:49:51,Daily Spender,iPhone 13,False
+99,Neha,Chauhan,neha.chauhan650@example.com,+91 8696910171,1987-05-05,Jaipur,Rajasthan,2024-03-30 15:49:51,Student,Windows PC,False
+100,Vikram,Menon,vikram.menon113@example.com,+91 7315915695,1976-09-30,Ahmedabad,Gujarat,2024-08-25 15:49:51,Daily Spender,Windows PC,False
+101,Ananya,Verma,ananya.verma830@example.com,+91 6823309354,1997-04-06,Chennai,Tamil Nadu,2026-07-18 15:49:51,Daily Spender,Samsung Galaxy S23,False
+102,Neha,Verma,neha.verma813@example.com,+91 6723920140,2002-09-13,Delhi,Delhi,2025-06-26 15:49:51,Student,Windows PC,False
+103,Neha,Joshi,neha.joshi816@example.com,+91 7733333425,2001-10-08,Pune,Maharashtra,2022-12-21 15:49:51,Student,iPhone 13,False
+104,Rahul,Iyer,rahul.iyer270@example.com,+91 7334583414,1985-12-13,Hyderabad,Telangana,2023-01-30 15:49:51,Daily Spender,MacBook Air,False
+105,Pooja,Patel,pooja.patel925@example.com,+91 6379596267,2000-05-27,Pune,Maharashtra,2024-07-29 15:49:51,Daily Spender,Samsung Galaxy S23,False
+106,Varun,Deshmukh,varun.deshmukh554@example.com,+91 7763478047,1984-07-10,Bengaluru,Karnataka,2025-02-22 15:49:51,High Roller,iPhone 15,False
+107,Karan,Joshi,karan.joshi563@example.com,+91 6626470240,1953-01-27,Bengaluru,Karnataka,2024-03-29 15:49:51,Daily Spender,MacBook Air,False
+108,Aarav,Reddy,aarav.reddy425@example.com,+91 7414187408,1998-10-28,Mumbai,Maharashtra,2026-04-18 15:49:51,High Roller,MacBook Air,True
+109,Kavya,Reddy,kavya.reddy823@example.com,+91 9012069073,1949-11-05,Jaipur,Rajasthan,2025-03-22 15:49:51,Daily Spender,iPhone 15,False
+110,Kavya,Bose,kavya.bose22@example.com,+91 6866085852,1959-12-14,Chennai,Tamil Nadu,2024-03-12 15:49:51,Student,iPhone 13,False
+111,Aarav,Das,aarav.das58@example.com,+91 9864925769,1950-03-23,Chennai,Tamil Nadu,2022-11-12 15:49:51,Daily Spender,Samsung Galaxy S23,False
+112,Aditya,Bose,aditya.bose873@example.com,+91 6170916209,2006-10-09,Ahmedabad,Gujarat,2024-09-09 15:49:51,Daily Spender,Windows PC,False
+113,Aditya,Patel,aditya.patel39@example.com,+91 8144002671,1961-11-23,Mumbai,Maharashtra,2024-01-26 15:49:51,Daily Spender,iPhone 13,False
+114,Kavya,Chauhan,kavya.chauhan544@example.com,+91 8960064884,1986-02-15,Surat,Gujarat,2026-01-08 15:49:51,Student,iPhone 15,True
+115,Kavya,Verma,kavya.verma745@example.com,+91 7266790810,1981-03-20,Jaipur,Rajasthan,2026-03-29 15:49:51,Student,iPhone 15,False
+116,Amit,Das,amit.das453@example.com,+91 6728058493,1948-12-25,Kolkata,West Bengal,2023-12-11 15:49:51,Student,iPhone 13,False
+117,Vikram,Iyer,vikram.iyer91@example.com,+91 7474977524,1957-03-10,Hyderabad,Telangana,2025-10-11 15:49:51,Student,Windows PC,False
+118,Riya,Nair,riya.nair638@example.com,+91 9470120468,2003-10-01,Bengaluru,Karnataka,2023-10-24 15:49:51,Student,MacBook Air,False
+119,Pooja,Rao,pooja.rao674@example.com,+91 8755719098,1955-04-21,Ahmedabad,Gujarat,2023-04-28 15:49:51,Daily Spender,Windows PC,False
+120,Pooja,Chauhan,pooja.chauhan734@example.com,+91 6246031677,1997-09-05,Bengaluru,Karnataka,2026-08-05 15:49:51,Daily Spender,Samsung Galaxy S23,False
+121,Ananya,Rao,ananya.rao570@example.com,+91 6347886189,1961-12-27,Delhi,Delhi,2024-06-06 15:49:51,Student,Samsung Galaxy S23,False
+122,Rahul,Das,rahul.das500@example.com,+91 6889865087,1981-11-26,Bengaluru,Karnataka,2023-10-13 15:49:51,Daily Spender,MacBook Air,False
+123,Vikram,Deshmukh,vikram.deshmukh731@example.com,+91 7474979956,1961-09-28,Bengaluru,Karnataka,2024-11-13 15:49:51,Student,iPhone 13,False
+124,Rohan,Sharma,rohan.sharma358@example.com,+91 6875145754,1959-05-15,Mumbai,Maharashtra,2024-03-30 15:49:51,Student,Windows PC,False
+125,Aditya,Singh,aditya.singh207@example.com,+91 6570674708,1982-11-15,Surat,Gujarat,2022-09-08 15:49:51,Daily Spender,Windows PC,False
+126,Kavya,Rao,kavya.rao911@example.com,+91 8362241400,1999-12-21,Ahmedabad,Gujarat,2023-01-06 15:49:51,Student,MacBook Air,False
+127,Neha,Verma,neha.verma471@example.com,+91 7677244732,1962-02-07,Pune,Maharashtra,2023-12-21 15:49:51,Daily Spender,iPhone 13,False
+128,Amit,Gupta,amit.gupta16@example.com,+91 7042690268,1946-11-23,Chennai,Tamil Nadu,2025-02-26 15:49:51,Daily Spender,MacBook Air,True
+129,Aarav,Menon,aarav.menon479@example.com,+91 7010832062,1975-03-12,Chennai,Tamil Nadu,2024-09-17 15:49:51,Daily Spender,iPhone 13,False
+130,Riya,Verma,riya.verma956@example.com,+91 9989623788,1948-11-30,Kolkata,West Bengal,2024-07-25 15:49:51,High Roller,Samsung Galaxy S23,True
+131,Ananya,Bose,ananya.bose833@example.com,+91 7519496622,1974-08-11,Ahmedabad,Gujarat,2022-10-30 15:49:51,High Roller,iPhone 15,False
+132,Rahul,Singh,rahul.singh590@example.com,+91 8106788294,1970-08-29,Bengaluru,Karnataka,2024-11-25 15:49:51,Daily Spender,Samsung Galaxy S23,False
+133,Amit,Joshi,amit.joshi610@example.com,+91 6559130603,1949-11-12,Kolkata,West Bengal,2023-05-20 15:49:51,Daily Spender,iPhone 13,False
+134,Neha,Joshi,neha.joshi205@example.com,+91 9760660281,1955-11-21,Ahmedabad,Gujarat,2023-12-29 15:49:51,Daily Spender,iPhone 13,False
+135,Amit,Gupta,amit.gupta896@example.com,+91 7278140165,1997-09-11,Pune,Maharashtra,2025-03-06 15:49:51,Daily Spender,Samsung Galaxy S23,False
+136,Riya,Das,riya.das991@example.com,+91 9268240653,1994-12-04,Hyderabad,Telangana,2024-12-07 15:49:51,High Roller,Windows PC,True
+137,Priya,Bose,priya.bose35@example.com,+91 7392561584,1969-11-30,Kolkata,West Bengal,2024-07-18 15:49:51,Daily Spender,iPhone 13,False
+138,Amit,Patel,amit.patel208@example.com,+91 9526595745,1967-04-03,Hyderabad,Telangana,2023-01-11 15:49:51,Daily Spender,iPhone 15,False
+139,Pooja,Reddy,pooja.reddy541@example.com,+91 6682247921,1958-03-24,Chennai,Tamil Nadu,2023-12-02 15:49:51,Student,Samsung Galaxy S23,False
+140,Neha,Joshi,neha.joshi335@example.com,+91 9358295416,1971-04-21,Chennai,Tamil Nadu,2022-09-16 15:49:51,Daily Spender,Windows PC,False
+141,Amit,Gupta,amit.gupta895@example.com,+91 7927488886,1957-07-18,Bengaluru,Karnataka,2026-04-11 15:49:51,Daily Spender,MacBook Air,False
+142,Ananya,Menon,ananya.menon739@example.com,+91 7983914380,1958-09-19,Kolkata,West Bengal,2024-01-19 15:49:51,Student,Windows PC,False
+143,Rohan,Menon,rohan.menon916@example.com,+91 8437305670,1986-11-15,Bengaluru,Karnataka,2023-10-01 15:49:51,Daily Spender,MacBook Air,False
+144,Kavya,Reddy,kavya.reddy647@example.com,+91 8396755357,1999-10-22,Hyderabad,Telangana,2024-12-06 15:49:51,High Roller,Samsung Galaxy S23,False
+145,Rohan,Chauhan,rohan.chauhan185@example.com,+91 9590601100,1990-04-03,Bengaluru,Karnataka,2025-07-02 15:49:51,Student,Windows PC,False
+146,Aditya,Joshi,aditya.joshi105@example.com,+91 6963304673,1977-10-12,Chennai,Tamil Nadu,2024-05-05 15:49:51,Daily Spender,Samsung Galaxy S23,False
+147,Karan,Gupta,karan.gupta777@example.com,+91 6679071998,2003-09-27,Mumbai,Maharashtra,2023-02-19 15:49:51,Daily Spender,MacBook Air,False
+148,Sneha,Das,sneha.das309@example.com,+91 9023430146,1947-07-05,Chennai,Tamil Nadu,2023-06-30 15:49:51,Daily Spender,MacBook Air,False
+149,Karan,Iyer,karan.iyer95@example.com,+91 7224292292,1958-12-15,Jaipur,Rajasthan,2024-05-14 15:49:51,Daily Spender,iPhone 13,True
+150,Pooja,Das,pooja.das964@example.com,+91 9629343037,1997-01-05,Surat,Gujarat,2023-06-15 15:49:51,Daily Spender,MacBook Air,False
+151,Varun,Patel,varun.patel810@example.com,+91 6335143845,1994-09-15,Mumbai,Maharashtra,2022-10-24 15:49:51,Daily Spender,Samsung Galaxy S23,True
+152,Neha,Joshi,neha.joshi314@example.com,+91 6149615931,1995-04-17,Chennai,Tamil Nadu,2025-01-08 15:49:51,Student,MacBook Air,False
+153,Sneha,Iyer,sneha.iyer292@example.com,+91 6802741780,1994-11-23,Delhi,Delhi,2022-12-16 15:49:51,Daily Spender,iPhone 13,True
+154,Neha,Verma,neha.verma339@example.com,+91 9530718247,1991-08-22,Pune,Maharashtra,2025-02-28 15:49:51,Daily Spender,Windows PC,False
+155,Rohan,Das,rohan.das940@example.com,+91 7760242524,2001-03-12,Surat,Gujarat,2023-10-06 15:49:51,Daily Spender,Samsung Galaxy S23,True
+156,Rohan,Joshi,rohan.joshi808@example.com,+91 9840417215,1988-10-07,Surat,Gujarat,2022-11-23 15:49:51,Daily Spender,MacBook Air,False
+157,Neha,Sharma,neha.sharma898@example.com,+91 8862013005,2003-11-16,Hyderabad,Telangana,2025-09-29 15:49:51,Student,iPhone 13,False
+158,Kavya,Gupta,kavya.gupta242@example.com,+91 7931185338,1998-09-22,Jaipur,Rajasthan,2026-05-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+159,Aditya,Joshi,aditya.joshi717@example.com,+91 8765358432,1971-09-21,Ahmedabad,Gujarat,2023-10-16 15:49:51,Daily Spender,iPhone 15,False
+160,Pooja,Reddy,pooja.reddy901@example.com,+91 9547984269,2003-02-25,Hyderabad,Telangana,2024-01-23 15:49:51,Student,iPhone 13,True
+161,Aditya,Menon,aditya.menon842@example.com,+91 9091418043,1957-04-08,Mumbai,Maharashtra,2022-09-04 15:49:51,Student,MacBook Air,False
+162,Pooja,Singh,pooja.singh558@example.com,+91 7171405796,1994-12-29,Kolkata,West Bengal,2024-12-21 15:49:51,Daily Spender,Samsung Galaxy S23,False
+163,Kavya,Gupta,kavya.gupta221@example.com,+91 6290858275,1972-06-01,Mumbai,Maharashtra,2023-09-26 15:49:51,Daily Spender,MacBook Air,True
+164,Karan,Singh,karan.singh870@example.com,+91 9719742606,1993-08-18,Chennai,Tamil Nadu,2025-10-12 15:49:51,Daily Spender,MacBook Air,True
+165,Ananya,Menon,ananya.menon727@example.com,+91 7704279510,1980-12-17,Surat,Gujarat,2023-10-09 15:49:51,Daily Spender,Windows PC,False
+166,Aditya,Singh,aditya.singh386@example.com,+91 8571813779,1979-01-07,Pune,Maharashtra,2025-12-01 15:49:51,High Roller,Samsung Galaxy S23,False
+167,Amit,Verma,amit.verma798@example.com,+91 6032018196,1964-01-05,Surat,Gujarat,2025-12-05 15:49:51,Daily Spender,Samsung Galaxy S23,False
+168,Sneha,Sharma,sneha.sharma905@example.com,+91 8462336270,2004-11-06,Jaipur,Rajasthan,2022-12-13 15:49:51,High Roller,MacBook Air,False
+169,Aarav,Nair,aarav.nair820@example.com,+91 6243328298,1971-01-03,Chennai,Tamil Nadu,2025-09-10 15:49:51,Daily Spender,iPhone 13,False
+170,Aditya,Bose,aditya.bose808@example.com,+91 7914781207,1960-05-24,Ahmedabad,Gujarat,2022-11-11 15:49:51,Student,iPhone 13,False
+171,Sneha,Verma,sneha.verma359@example.com,+91 9853326409,1961-09-11,Ahmedabad,Gujarat,2022-12-26 15:49:51,Daily Spender,MacBook Air,False
+172,Aditya,Deshmukh,aditya.deshmukh336@example.com,+91 6015223518,1984-12-11,Jaipur,Rajasthan,2026-05-27 15:49:51,Daily Spender,MacBook Air,False
+173,Sneha,Chauhan,sneha.chauhan66@example.com,+91 8734788458,1966-10-08,Bengaluru,Karnataka,2024-01-09 15:49:51,Daily Spender,iPhone 15,True
+174,Kavya,Verma,kavya.verma845@example.com,+91 9359670220,2006-04-12,Mumbai,Maharashtra,2025-12-14 15:49:51,Daily Spender,Windows PC,False
+175,Karan,Iyer,karan.iyer862@example.com,+91 6043435542,1968-09-07,Kolkata,West Bengal,2022-11-13 15:49:51,Daily Spender,Windows PC,False
+176,Priya,Menon,priya.menon21@example.com,+91 8977235308,2004-09-22,Surat,Gujarat,2023-07-12 15:49:51,Student,Windows PC,False
+177,Rohan,Gupta,rohan.gupta987@example.com,+91 7686799418,1984-01-05,Mumbai,Maharashtra,2026-06-04 15:49:51,High Roller,iPhone 13,True
+178,Riya,Iyer,riya.iyer863@example.com,+91 7650107581,1959-05-19,Jaipur,Rajasthan,2023-12-03 15:49:51,Student,iPhone 13,False
+179,Pooja,Iyer,pooja.iyer413@example.com,+91 7015451573,1948-12-17,Jaipur,Rajasthan,2026-06-13 15:49:51,Daily Spender,MacBook Air,False
+180,Ananya,Singh,ananya.singh709@example.com,+91 8233449596,1956-10-05,Hyderabad,Telangana,2025-05-14 15:49:51,Daily Spender,Windows PC,False
+181,Aarav,Singh,aarav.singh22@example.com,+91 8753862774,1983-12-28,Pune,Maharashtra,2026-03-30 15:49:51,Daily Spender,Samsung Galaxy S23,False
+182,Varun,Sharma,varun.sharma682@example.com,+91 7848990764,1948-03-17,Ahmedabad,Gujarat,2026-01-30 15:49:51,Student,iPhone 15,False
+183,Kavya,Iyer,kavya.iyer728@example.com,+91 8811592207,1986-10-10,Chennai,Tamil Nadu,2025-05-05 15:49:51,Daily Spender,iPhone 15,False
+184,Aarav,Patel,aarav.patel411@example.com,+91 6270523443,2004-11-23,Mumbai,Maharashtra,2023-04-23 15:49:51,Daily Spender,iPhone 13,False
+185,Ananya,Deshmukh,ananya.deshmukh747@example.com,+91 8681610106,1994-02-21,Chennai,Tamil Nadu,2025-07-05 15:49:51,Daily Spender,Windows PC,False
+186,Neha,Joshi,neha.joshi657@example.com,+91 6408418254,1995-04-28,Mumbai,Maharashtra,2026-05-09 15:49:51,Daily Spender,MacBook Air,False
+187,Sneha,Sharma,sneha.sharma781@example.com,+91 7478238310,1965-08-17,Ahmedabad,Gujarat,2023-06-11 15:49:51,High Roller,iPhone 15,False
+188,Riya,Patel,riya.patel924@example.com,+91 7404251969,1977-03-16,Mumbai,Maharashtra,2024-12-06 15:49:51,Student,iPhone 13,False
+189,Aditya,Iyer,aditya.iyer517@example.com,+91 7717594688,2003-03-25,Delhi,Delhi,2025-12-24 15:49:51,Daily Spender,Windows PC,False
+190,Karan,Das,karan.das206@example.com,+91 8900714524,1980-07-10,Pune,Maharashtra,2024-06-23 15:49:51,Daily Spender,Samsung Galaxy S23,False
+191,Vikram,Nair,vikram.nair969@example.com,+91 6227022072,1951-04-10,Pune,Maharashtra,2025-11-23 15:49:51,Daily Spender,iPhone 13,False
+192,Varun,Deshmukh,varun.deshmukh776@example.com,+91 8492106285,1999-11-16,Ahmedabad,Gujarat,2026-06-02 15:49:51,Student,iPhone 13,False
+193,Sneha,Menon,sneha.menon674@example.com,+91 8512063703,1972-09-28,Ahmedabad,Gujarat,2024-07-28 15:49:51,Daily Spender,iPhone 13,True
+194,Vikram,Nair,vikram.nair43@example.com,+91 7835981700,1951-03-10,Surat,Gujarat,2026-05-09 15:49:51,Student,Samsung Galaxy S23,False
+195,Priya,Joshi,priya.joshi429@example.com,+91 7315359514,1976-02-15,Chennai,Tamil Nadu,2024-11-05 15:49:51,Student,MacBook Air,False
+196,Amit,Nair,amit.nair305@example.com,+91 9078849273,1979-05-24,Mumbai,Maharashtra,2022-08-17 15:49:51,High Roller,iPhone 15,False
+197,Varun,Das,varun.das845@example.com,+91 8945700980,1957-05-01,Bengaluru,Karnataka,2024-09-04 15:49:51,Student,iPhone 15,False
+198,Rahul,Gupta,rahul.gupta262@example.com,+91 8276422857,2005-07-07,Delhi,Delhi,2024-09-17 15:49:51,Daily Spender,iPhone 13,False
+199,Neha,Verma,neha.verma376@example.com,+91 8685172425,1968-07-01,Chennai,Tamil Nadu,2025-06-23 15:49:51,Daily Spender,iPhone 13,False
+200,Riya,Rao,riya.rao890@example.com,+91 8823977618,1959-01-23,Ahmedabad,Gujarat,2026-07-26 15:49:51,Daily Spender,Windows PC,False
+201,Aditya,Sharma,aditya.sharma225@example.com,+91 8968634461,1985-05-21,Mumbai,Maharashtra,2023-01-27 15:49:51,Daily Spender,Windows PC,False
+202,Neha,Rao,neha.rao499@example.com,+91 6183431158,1990-02-14,Mumbai,Maharashtra,2025-06-13 15:49:51,Daily Spender,iPhone 15,False
+203,Kavya,Patel,kavya.patel393@example.com,+91 9837497132,1972-04-27,Bengaluru,Karnataka,2023-07-29 15:49:51,High Roller,iPhone 13,False
+204,Aarav,Menon,aarav.menon378@example.com,+91 6271855252,1965-05-20,Kolkata,West Bengal,2022-12-06 15:49:51,Daily Spender,iPhone 13,False
+205,Rohan,Bose,rohan.bose606@example.com,+91 8595167238,1984-07-16,Delhi,Delhi,2025-05-15 15:49:51,Daily Spender,MacBook Air,True
+206,Riya,Menon,riya.menon986@example.com,+91 9415108235,1972-07-29,Mumbai,Maharashtra,2023-04-19 15:49:51,Daily Spender,Samsung Galaxy S23,False
+207,Vikram,Bose,vikram.bose811@example.com,+91 6582026571,1954-04-01,Delhi,Delhi,2025-02-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+208,Kavya,Sharma,kavya.sharma174@example.com,+91 9934671283,1994-08-02,Jaipur,Rajasthan,2026-06-01 15:49:51,Student,iPhone 13,False
+209,Rohan,Gupta,rohan.gupta679@example.com,+91 7179997907,1977-12-20,Chennai,Tamil Nadu,2026-03-25 15:49:51,Daily Spender,MacBook Air,False
+210,Rohan,Verma,rohan.verma142@example.com,+91 9129610927,1951-05-03,Ahmedabad,Gujarat,2026-03-16 15:49:51,Student,iPhone 15,False
+211,Kavya,Singh,kavya.singh781@example.com,+91 7341832841,1962-05-28,Pune,Maharashtra,2023-07-22 15:49:51,Daily Spender,iPhone 15,False
+212,Rohan,Reddy,rohan.reddy919@example.com,+91 7263664483,1984-06-04,Mumbai,Maharashtra,2024-02-19 15:49:51,Daily Spender,Samsung Galaxy S23,False
+213,Neha,Joshi,neha.joshi110@example.com,+91 7756532055,2003-05-26,Hyderabad,Telangana,2026-07-26 15:49:51,Daily Spender,Samsung Galaxy S23,False
+214,Priya,Iyer,priya.iyer587@example.com,+91 7154143325,1998-09-07,Kolkata,West Bengal,2023-11-25 15:49:51,Daily Spender,Windows PC,True
+215,Kavya,Verma,kavya.verma909@example.com,+91 9509518687,1972-07-22,Pune,Maharashtra,2024-12-19 15:49:51,Daily Spender,iPhone 13,False
+216,Priya,Menon,priya.menon728@example.com,+91 6879600346,1993-02-28,Hyderabad,Telangana,2022-12-28 15:49:51,Daily Spender,Windows PC,False
+217,Ananya,Das,ananya.das114@example.com,+91 9618281581,1985-09-30,Hyderabad,Telangana,2023-05-15 15:49:51,Daily Spender,iPhone 13,False
+218,Neha,Menon,neha.menon501@example.com,+91 8809838855,1987-11-11,Jaipur,Rajasthan,2025-11-01 15:49:51,Daily Spender,MacBook Air,False
+219,Aarav,Nair,aarav.nair348@example.com,+91 9196630577,1958-09-23,Mumbai,Maharashtra,2022-08-07 15:49:51,Daily Spender,Windows PC,False
+220,Rohan,Gupta,rohan.gupta267@example.com,+91 9897142919,1997-03-12,Hyderabad,Telangana,2023-02-26 15:49:51,Daily Spender,iPhone 15,False
+221,Varun,Singh,varun.singh219@example.com,+91 9061279783,1955-03-10,Surat,Gujarat,2026-05-06 15:49:51,Daily Spender,Samsung Galaxy S23,False
+222,Aarav,Deshmukh,aarav.deshmukh801@example.com,+91 6261959321,2000-03-20,Mumbai,Maharashtra,2023-04-19 15:49:51,Daily Spender,Windows PC,False
+223,Sneha,Chauhan,sneha.chauhan302@example.com,+91 6299400456,2001-10-05,Mumbai,Maharashtra,2024-09-12 15:49:51,Daily Spender,iPhone 15,False
+224,Rahul,Singh,rahul.singh829@example.com,+91 6801918015,1983-03-30,Delhi,Delhi,2022-12-09 15:49:51,High Roller,Windows PC,True
+225,Ananya,Chauhan,ananya.chauhan850@example.com,+91 7300623765,1947-06-06,Kolkata,West Bengal,2024-04-23 15:49:51,Daily Spender,iPhone 13,True
+226,Rohan,Gupta,rohan.gupta37@example.com,+91 7448818928,1949-11-06,Hyderabad,Telangana,2024-08-28 15:49:51,Daily Spender,Windows PC,False
+227,Aditya,Rao,aditya.rao747@example.com,+91 7288597725,1997-04-09,Mumbai,Maharashtra,2024-07-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+228,Sneha,Deshmukh,sneha.deshmukh174@example.com,+91 7307639498,1962-02-18,Pune,Maharashtra,2023-02-20 15:49:51,Daily Spender,Windows PC,False
+229,Sneha,Deshmukh,sneha.deshmukh860@example.com,+91 8979608673,1953-07-18,Jaipur,Rajasthan,2025-12-12 15:49:51,Daily Spender,iPhone 15,False
+230,Kavya,Gupta,kavya.gupta227@example.com,+91 8685384760,1969-11-24,Kolkata,West Bengal,2023-02-24 15:49:51,High Roller,Samsung Galaxy S23,False
+231,Sneha,Verma,sneha.verma478@example.com,+91 8840048296,1953-04-14,Pune,Maharashtra,2024-09-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+232,Pooja,Bose,pooja.bose976@example.com,+91 6587611194,1952-09-09,Pune,Maharashtra,2024-07-23 15:49:51,Daily Spender,iPhone 15,False
+233,Rohan,Patel,rohan.patel224@example.com,+91 6870434370,1969-02-15,Bengaluru,Karnataka,2023-05-13 15:49:51,Daily Spender,iPhone 15,False
+234,Neha,Chauhan,neha.chauhan867@example.com,+91 7733688862,1969-12-12,Mumbai,Maharashtra,2025-07-21 15:49:51,Daily Spender,MacBook Air,False
+235,Aditya,Chauhan,aditya.chauhan353@example.com,+91 8522049947,1992-05-08,Bengaluru,Karnataka,2026-07-17 15:49:51,Student,iPhone 15,True
+236,Rahul,Iyer,rahul.iyer973@example.com,+91 7308694202,1957-01-21,Pune,Maharashtra,2025-07-05 15:49:51,Student,Samsung Galaxy S23,False
+237,Rahul,Patel,rahul.patel849@example.com,+91 7783874194,2004-08-19,Jaipur,Rajasthan,2023-12-05 15:49:51,Daily Spender,Windows PC,False
+238,Amit,Bose,amit.bose741@example.com,+91 6262902177,1993-04-30,Pune,Maharashtra,2025-02-26 15:49:51,Student,Samsung Galaxy S23,True
+239,Kavya,Nair,kavya.nair335@example.com,+91 9960443109,2005-08-04,Bengaluru,Karnataka,2022-10-29 15:49:51,Daily Spender,iPhone 13,False
+240,Sneha,Bose,sneha.bose651@example.com,+91 7611722989,1965-12-30,Ahmedabad,Gujarat,2024-03-03 15:49:51,Daily Spender,MacBook Air,False
+241,Kavya,Singh,kavya.singh466@example.com,+91 8142777563,1967-03-14,Ahmedabad,Gujarat,2025-07-26 15:49:51,Daily Spender,iPhone 13,True
+242,Amit,Joshi,amit.joshi131@example.com,+91 9173369339,1968-12-02,Bengaluru,Karnataka,2025-03-31 15:49:51,Daily Spender,Windows PC,True
+243,Vikram,Singh,vikram.singh387@example.com,+91 9957790091,1991-06-06,Chennai,Tamil Nadu,2023-12-28 15:49:51,Student,iPhone 15,False
+244,Kavya,Chauhan,kavya.chauhan393@example.com,+91 6747014636,1959-05-23,Ahmedabad,Gujarat,2022-12-30 15:49:51,Daily Spender,MacBook Air,False
+245,Sneha,Deshmukh,sneha.deshmukh200@example.com,+91 8857282228,1985-11-01,Bengaluru,Karnataka,2025-03-26 15:49:51,Daily Spender,Windows PC,False
+246,Kavya,Rao,kavya.rao942@example.com,+91 7201165319,1949-08-22,Chennai,Tamil Nadu,2025-06-21 15:49:51,Daily Spender,Windows PC,False
+247,Sneha,Patel,sneha.patel73@example.com,+91 8162061384,2001-04-14,Delhi,Delhi,2025-08-20 15:49:51,Daily Spender,iPhone 13,False
+248,Riya,Joshi,riya.joshi171@example.com,+91 9059169722,1986-09-15,Pune,Maharashtra,2023-05-11 15:49:51,Student,MacBook Air,True
+249,Karan,Menon,karan.menon421@example.com,+91 8768058712,1978-08-20,Jaipur,Rajasthan,2025-06-12 15:49:51,Student,Samsung Galaxy S23,False
+250,Ananya,Chauhan,ananya.chauhan266@example.com,+91 8024961673,1964-03-23,Jaipur,Rajasthan,2026-03-13 15:49:51,Daily Spender,MacBook Air,False
+251,Kavya,Joshi,kavya.joshi430@example.com,+91 7962356128,1953-06-18,Surat,Gujarat,2024-02-07 15:49:51,High Roller,MacBook Air,False
+252,Rahul,Iyer,rahul.iyer954@example.com,+91 9220166731,1950-06-20,Mumbai,Maharashtra,2025-01-08 15:49:51,High Roller,Samsung Galaxy S23,False
+253,Kavya,Joshi,kavya.joshi889@example.com,+91 9318078958,1958-12-10,Chennai,Tamil Nadu,2025-06-20 15:49:51,Daily Spender,MacBook Air,True
+254,Ananya,Chauhan,ananya.chauhan539@example.com,+91 7580345227,1992-05-04,Chennai,Tamil Nadu,2025-11-21 15:49:51,Student,iPhone 15,False
+255,Priya,Chauhan,priya.chauhan682@example.com,+91 7429713446,1959-01-07,Mumbai,Maharashtra,2023-06-14 15:49:51,Daily Spender,Samsung Galaxy S23,False
+256,Pooja,Joshi,pooja.joshi113@example.com,+91 9956263032,1972-03-28,Jaipur,Rajasthan,2025-06-28 15:49:51,Student,iPhone 13,False
+257,Riya,Chauhan,riya.chauhan570@example.com,+91 8191278179,1959-01-04,Jaipur,Rajasthan,2023-09-21 15:49:51,Daily Spender,iPhone 13,False
+258,Sneha,Das,sneha.das20@example.com,+91 6626210611,1965-04-07,Bengaluru,Karnataka,2024-03-17 15:49:51,Daily Spender,Samsung Galaxy S23,False
+259,Neha,Das,neha.das858@example.com,+91 9674266913,1954-08-08,Ahmedabad,Gujarat,2023-01-27 15:49:51,Student,Windows PC,False
+260,Neha,Rao,neha.rao10@example.com,+91 6221108385,1995-03-23,Mumbai,Maharashtra,2022-09-25 15:49:51,Daily Spender,MacBook Air,False
+261,Ananya,Patel,ananya.patel224@example.com,+91 9103020305,2005-07-08,Chennai,Tamil Nadu,2022-12-26 15:49:51,Student,Windows PC,False
+262,Sneha,Menon,sneha.menon866@example.com,+91 9372299456,1961-05-03,Hyderabad,Telangana,2026-07-23 15:49:51,Daily Spender,iPhone 15,False
+263,Amit,Menon,amit.menon543@example.com,+91 8324301605,1985-10-31,Delhi,Delhi,2023-01-08 15:49:51,High Roller,Windows PC,False
+264,Amit,Das,amit.das719@example.com,+91 8143140538,1965-09-07,Kolkata,West Bengal,2023-05-02 15:49:51,Daily Spender,Windows PC,False
+265,Vikram,Sharma,vikram.sharma611@example.com,+91 7712326853,1993-03-17,Ahmedabad,Gujarat,2023-02-06 15:49:51,Daily Spender,Windows PC,False
+266,Sneha,Verma,sneha.verma475@example.com,+91 9742816645,1948-12-05,Surat,Gujarat,2024-07-11 15:49:51,Daily Spender,iPhone 15,False
+267,Sneha,Sharma,sneha.sharma106@example.com,+91 9887396162,1963-09-10,Bengaluru,Karnataka,2024-01-24 15:49:51,Daily Spender,MacBook Air,False
+268,Neha,Deshmukh,neha.deshmukh113@example.com,+91 8121220823,1996-12-14,Delhi,Delhi,2024-05-25 15:49:51,Daily Spender,Samsung Galaxy S23,False
+269,Priya,Nair,priya.nair887@example.com,+91 6747919256,1964-11-05,Kolkata,West Bengal,2023-10-06 15:49:51,Daily Spender,MacBook Air,False
+270,Neha,Sharma,neha.sharma688@example.com,+91 6633761394,1983-12-12,Hyderabad,Telangana,2022-09-11 15:49:51,High Roller,Windows PC,False
+271,Rahul,Rao,rahul.rao443@example.com,+91 6578964261,1977-09-19,Hyderabad,Telangana,2023-09-06 15:49:51,Daily Spender,iPhone 15,False
+272,Amit,Joshi,amit.joshi311@example.com,+91 8669850320,1979-05-11,Jaipur,Rajasthan,2024-04-20 15:49:51,High Roller,iPhone 15,True
+273,Rahul,Das,rahul.das204@example.com,+91 6956744203,1970-10-30,Bengaluru,Karnataka,2025-12-04 15:49:51,Daily Spender,iPhone 13,False
+274,Karan,Rao,karan.rao70@example.com,+91 9692863449,1959-08-24,Ahmedabad,Gujarat,2025-05-28 15:49:51,Student,Windows PC,False
+275,Amit,Nair,amit.nair270@example.com,+91 6340350577,1970-07-10,Pune,Maharashtra,2024-03-04 15:49:51,High Roller,MacBook Air,False
+276,Aditya,Rao,aditya.rao297@example.com,+91 8481747366,1964-03-27,Surat,Gujarat,2023-01-16 15:49:51,Daily Spender,iPhone 13,False
+277,Karan,Deshmukh,karan.deshmukh243@example.com,+91 7085565523,1998-04-26,Ahmedabad,Gujarat,2026-03-05 15:49:51,Student,iPhone 13,False
+278,Ananya,Singh,ananya.singh312@example.com,+91 8480886543,1963-08-10,Hyderabad,Telangana,2026-01-10 15:49:51,Daily Spender,MacBook Air,False
+279,Kavya,Joshi,kavya.joshi22@example.com,+91 8006903985,1954-03-03,Mumbai,Maharashtra,2026-07-11 15:49:51,Daily Spender,Samsung Galaxy S23,False
+280,Priya,Patel,priya.patel362@example.com,+91 9530060083,1954-12-08,Jaipur,Rajasthan,2024-05-01 15:49:51,Daily Spender,Samsung Galaxy S23,True
+281,Rohan,Joshi,rohan.joshi912@example.com,+91 9304884297,1946-04-24,Jaipur,Rajasthan,2023-03-13 15:49:51,High Roller,Windows PC,False
+282,Amit,Menon,amit.menon655@example.com,+91 6801150175,1982-11-23,Mumbai,Maharashtra,2024-04-05 15:49:51,Daily Spender,Windows PC,False
+283,Aditya,Joshi,aditya.joshi854@example.com,+91 7967451538,1980-03-23,Hyderabad,Telangana,2023-05-27 15:49:51,Daily Spender,iPhone 15,False
+284,Pooja,Sharma,pooja.sharma762@example.com,+91 9300888076,1952-01-29,Pune,Maharashtra,2025-09-21 15:49:51,Daily Spender,iPhone 13,False
+285,Varun,Nair,varun.nair29@example.com,+91 7285018603,1979-09-15,Mumbai,Maharashtra,2026-05-02 15:49:51,Daily Spender,MacBook Air,True
+286,Rohan,Singh,rohan.singh486@example.com,+91 9686625654,1983-03-11,Bengaluru,Karnataka,2024-11-10 15:49:51,Daily Spender,iPhone 13,False
+287,Ananya,Gupta,ananya.gupta308@example.com,+91 6300778322,1962-02-04,Jaipur,Rajasthan,2023-04-17 15:49:51,Daily Spender,Samsung Galaxy S23,False
+288,Amit,Patel,amit.patel684@example.com,+91 9614970670,1984-11-06,Jaipur,Rajasthan,2022-11-24 15:49:51,Student,Windows PC,False
+289,Neha,Nair,neha.nair401@example.com,+91 7490751422,1950-08-03,Hyderabad,Telangana,2023-05-30 15:49:51,Student,Samsung Galaxy S23,False
+290,Pooja,Sharma,pooja.sharma307@example.com,+91 9969104842,1981-12-30,Kolkata,West Bengal,2023-07-09 15:49:51,Daily Spender,Windows PC,False
+291,Aarav,Joshi,aarav.joshi814@example.com,+91 9157755479,1979-02-08,Surat,Gujarat,2024-02-06 15:49:51,Student,iPhone 15,False
+292,Priya,Patel,priya.patel238@example.com,+91 6572332130,1948-06-11,Bengaluru,Karnataka,2023-08-01 15:49:51,Daily Spender,MacBook Air,False
+293,Pooja,Gupta,pooja.gupta943@example.com,+91 6223417554,1981-04-28,Chennai,Tamil Nadu,2025-05-26 15:49:51,Student,iPhone 13,False
+294,Vikram,Gupta,vikram.gupta848@example.com,+91 9737406281,1955-05-19,Pune,Maharashtra,2022-10-31 15:49:51,High Roller,Samsung Galaxy S23,False
+295,Neha,Gupta,neha.gupta458@example.com,+91 8842806787,1987-07-12,Surat,Gujarat,2024-07-23 15:49:51,Student,MacBook Air,False
+296,Varun,Chauhan,varun.chauhan203@example.com,+91 8745664963,1959-01-05,Mumbai,Maharashtra,2024-09-09 15:49:51,Daily Spender,Windows PC,True
+297,Priya,Menon,priya.menon368@example.com,+91 6847590481,1947-01-03,Surat,Gujarat,2025-08-30 15:49:51,Daily Spender,Samsung Galaxy S23,True
+298,Riya,Reddy,riya.reddy858@example.com,+91 7972248797,1987-06-25,Hyderabad,Telangana,2024-12-05 15:49:51,Daily Spender,MacBook Air,False
+299,Sneha,Nair,sneha.nair522@example.com,+91 7513086821,1984-12-17,Mumbai,Maharashtra,2024-07-26 15:49:51,Student,iPhone 15,False
+300,Priya,Deshmukh,priya.deshmukh599@example.com,+91 9828477597,1977-04-14,Chennai,Tamil Nadu,2026-05-23 15:49:51,Daily Spender,iPhone 13,True
+301,Neha,Singh,neha.singh291@example.com,+91 6277401409,1952-10-22,Kolkata,West Bengal,2023-08-14 15:49:51,Student,iPhone 13,True
+302,Pooja,Gupta,pooja.gupta271@example.com,+91 9097637085,1949-01-20,Kolkata,West Bengal,2025-06-08 15:49:51,Daily Spender,iPhone 13,False
+303,Rahul,Sharma,rahul.sharma771@example.com,+91 9352333484,1977-08-22,Ahmedabad,Gujarat,2023-01-29 15:49:51,Daily Spender,MacBook Air,False
+304,Sneha,Verma,sneha.verma843@example.com,+91 7875121111,1987-04-15,Delhi,Delhi,2022-11-10 15:49:51,Daily Spender,Samsung Galaxy S23,False
+305,Varun,Singh,varun.singh316@example.com,+91 7244065242,1977-02-14,Jaipur,Rajasthan,2024-06-01 15:49:51,Daily Spender,iPhone 15,False
+306,Kavya,Rao,kavya.rao726@example.com,+91 9089614429,1960-09-19,Surat,Gujarat,2023-06-16 15:49:51,Daily Spender,iPhone 13,False
+307,Riya,Menon,riya.menon314@example.com,+91 8325435600,1948-09-29,Delhi,Delhi,2026-01-29 15:49:51,Student,Windows PC,False
+308,Priya,Patel,priya.patel376@example.com,+91 9902259483,1983-12-28,Chennai,Tamil Nadu,2023-03-04 15:49:51,Daily Spender,iPhone 15,False
+309,Karan,Sharma,karan.sharma894@example.com,+91 7461199399,1966-09-24,Jaipur,Rajasthan,2026-05-17 15:49:51,Daily Spender,iPhone 13,False
+310,Sneha,Menon,sneha.menon346@example.com,+91 9337057027,1961-08-01,Chennai,Tamil Nadu,2026-07-17 15:49:51,High Roller,Windows PC,False
+311,Rohan,Sharma,rohan.sharma186@example.com,+91 9345098268,1968-06-01,Jaipur,Rajasthan,2025-03-30 15:49:51,High Roller,iPhone 13,False
+312,Pooja,Reddy,pooja.reddy270@example.com,+91 7249203055,2006-12-04,Kolkata,West Bengal,2024-02-11 15:49:51,Daily Spender,Windows PC,True
+313,Amit,Chauhan,amit.chauhan856@example.com,+91 7266465922,1976-02-05,Pune,Maharashtra,2025-09-20 15:49:51,Daily Spender,iPhone 15,False
+314,Aarav,Gupta,aarav.gupta687@example.com,+91 8773076563,1993-11-25,Hyderabad,Telangana,2024-05-18 15:49:51,High Roller,Windows PC,False
+315,Pooja,Sharma,pooja.sharma824@example.com,+91 6723032383,1966-08-12,Hyderabad,Telangana,2023-11-03 15:49:51,Daily Spender,MacBook Air,False
+316,Priya,Menon,priya.menon425@example.com,+91 9590598556,1990-03-04,Mumbai,Maharashtra,2025-10-20 15:49:51,Daily Spender,Windows PC,False
+317,Ananya,Reddy,ananya.reddy222@example.com,+91 7885059744,1946-11-19,Delhi,Delhi,2024-11-24 15:49:51,Student,iPhone 13,False
+318,Aditya,Patel,aditya.patel625@example.com,+91 9735130890,1974-06-28,Hyderabad,Telangana,2023-07-18 15:49:51,Student,iPhone 15,False
+319,Karan,Iyer,karan.iyer643@example.com,+91 8950232367,1964-06-18,Pune,Maharashtra,2025-09-18 15:49:51,Daily Spender,Windows PC,False
+320,Neha,Nair,neha.nair342@example.com,+91 9575887861,1966-11-03,Bengaluru,Karnataka,2023-06-05 15:49:51,Student,Samsung Galaxy S23,False
+321,Aarav,Rao,aarav.rao493@example.com,+91 8114476038,1975-11-27,Mumbai,Maharashtra,2024-12-22 15:49:51,Daily Spender,Windows PC,False
+322,Rohan,Verma,rohan.verma572@example.com,+91 7052040143,1967-03-17,Surat,Gujarat,2023-08-10 15:49:51,Daily Spender,Samsung Galaxy S23,False
+323,Amit,Gupta,amit.gupta945@example.com,+91 8132001427,2005-08-25,Delhi,Delhi,2023-06-16 15:49:51,Daily Spender,MacBook Air,False
+324,Ananya,Menon,ananya.menon880@example.com,+91 8728867784,1975-02-19,Ahmedabad,Gujarat,2026-06-02 15:49:51,Student,Samsung Galaxy S23,False
+325,Riya,Bose,riya.bose374@example.com,+91 7275726161,1982-03-20,Jaipur,Rajasthan,2024-10-31 15:49:51,Daily Spender,MacBook Air,False
+326,Amit,Sharma,amit.sharma846@example.com,+91 6074569092,1987-01-10,Ahmedabad,Gujarat,2025-03-07 15:49:51,Daily Spender,Samsung Galaxy S23,False
+327,Rahul,Das,rahul.das839@example.com,+91 7324956143,1968-09-30,Jaipur,Rajasthan,2026-04-08 15:49:51,Daily Spender,iPhone 13,True
+328,Riya,Gupta,riya.gupta403@example.com,+91 8234575373,1969-02-22,Pune,Maharashtra,2026-07-17 15:49:51,Daily Spender,Windows PC,False
+329,Aarav,Joshi,aarav.joshi887@example.com,+91 6203970697,1983-01-13,Chennai,Tamil Nadu,2023-12-04 15:49:51,Daily Spender,iPhone 13,False
+330,Vikram,Menon,vikram.menon175@example.com,+91 9794427863,2007-08-20,Bengaluru,Karnataka,2022-12-24 15:49:51,Daily Spender,iPhone 13,True
+331,Amit,Gupta,amit.gupta773@example.com,+91 9006548375,1979-01-20,Surat,Gujarat,2022-12-12 15:49:51,Daily Spender,MacBook Air,False
+332,Riya,Verma,riya.verma441@example.com,+91 7040988169,1965-02-27,Chennai,Tamil Nadu,2025-03-13 15:49:51,Daily Spender,iPhone 15,True
+333,Ananya,Singh,ananya.singh753@example.com,+91 9301589179,1999-03-04,Hyderabad,Telangana,2026-01-06 15:49:51,Daily Spender,iPhone 15,False
+334,Neha,Sharma,neha.sharma399@example.com,+91 7450340909,2001-10-07,Delhi,Delhi,2023-09-01 15:49:51,Daily Spender,Samsung Galaxy S23,False
+335,Aditya,Nair,aditya.nair621@example.com,+91 6185091805,1979-08-05,Hyderabad,Telangana,2024-10-24 15:49:51,Daily Spender,iPhone 13,True
+336,Riya,Singh,riya.singh41@example.com,+91 8593565949,1956-04-14,Mumbai,Maharashtra,2023-09-21 15:49:51,Daily Spender,MacBook Air,False
+337,Aarav,Nair,aarav.nair444@example.com,+91 6813052292,1972-02-14,Surat,Gujarat,2026-07-01 15:49:51,Daily Spender,Windows PC,False
+338,Aarav,Nair,aarav.nair479@example.com,+91 8683302736,1994-04-20,Mumbai,Maharashtra,2023-06-28 15:49:51,Student,iPhone 13,True
+339,Rahul,Iyer,rahul.iyer176@example.com,+91 8469002549,2005-09-10,Pune,Maharashtra,2023-12-14 15:49:51,Daily Spender,iPhone 15,False
+340,Rohan,Reddy,rohan.reddy492@example.com,+91 7871134067,1983-03-07,Surat,Gujarat,2025-12-22 15:49:51,High Roller,MacBook Air,False
+341,Vikram,Sharma,vikram.sharma836@example.com,+91 6193816020,1990-11-24,Ahmedabad,Gujarat,2026-02-11 15:49:51,Daily Spender,Windows PC,True
+342,Riya,Deshmukh,riya.deshmukh524@example.com,+91 7030897829,1970-12-22,Mumbai,Maharashtra,2024-04-01 15:49:51,Student,Samsung Galaxy S23,False
+343,Ananya,Gupta,ananya.gupta682@example.com,+91 6267039893,1955-07-21,Jaipur,Rajasthan,2026-07-18 15:49:51,Student,Windows PC,True
+344,Neha,Gupta,neha.gupta289@example.com,+91 6717999485,1994-11-02,Delhi,Delhi,2023-02-09 15:49:51,Daily Spender,Samsung Galaxy S23,True
+345,Ananya,Sharma,ananya.sharma392@example.com,+91 7886223168,1994-12-20,Bengaluru,Karnataka,2025-10-28 15:49:51,Student,iPhone 13,False
+346,Karan,Joshi,karan.joshi605@example.com,+91 6632988851,1994-06-03,Kolkata,West Bengal,2026-04-25 15:49:51,Daily Spender,iPhone 15,False
+347,Aditya,Rao,aditya.rao122@example.com,+91 6968038601,1952-07-23,Pune,Maharashtra,2023-07-17 15:49:51,Student,iPhone 15,False
+348,Aarav,Das,aarav.das116@example.com,+91 9321258515,1991-10-22,Hyderabad,Telangana,2025-01-06 15:49:51,Daily Spender,iPhone 15,False
+349,Amit,Deshmukh,amit.deshmukh214@example.com,+91 9392748014,1997-06-22,Jaipur,Rajasthan,2022-08-16 15:49:51,Daily Spender,Windows PC,False
+350,Neha,Gupta,neha.gupta321@example.com,+91 6398807994,1974-07-02,Pune,Maharashtra,2023-06-18 15:49:51,Daily Spender,Windows PC,False
+351,Neha,Verma,neha.verma188@example.com,+91 6750781173,1969-05-10,Kolkata,West Bengal,2024-10-14 15:49:51,Student,Samsung Galaxy S23,False
+352,Karan,Menon,karan.menon454@example.com,+91 7011463394,1953-11-26,Kolkata,West Bengal,2022-10-14 15:49:51,High Roller,iPhone 15,True
+353,Neha,Patel,neha.patel630@example.com,+91 7843774167,1964-06-03,Kolkata,West Bengal,2023-05-29 15:49:51,Daily Spender,iPhone 13,False
+354,Aarav,Chauhan,aarav.chauhan167@example.com,+91 7673136370,1976-01-22,Delhi,Delhi,2023-02-10 15:49:51,Student,Samsung Galaxy S23,False
+355,Kavya,Das,kavya.das49@example.com,+91 9021114671,2001-12-20,Ahmedabad,Gujarat,2025-07-02 15:49:51,Student,iPhone 13,False
+356,Pooja,Reddy,pooja.reddy960@example.com,+91 8430925078,1992-05-27,Bengaluru,Karnataka,2024-05-17 15:49:51,Daily Spender,iPhone 13,False
+357,Riya,Verma,riya.verma570@example.com,+91 7590631111,1973-09-04,Ahmedabad,Gujarat,2022-12-17 15:49:51,High Roller,iPhone 15,False
+358,Neha,Chauhan,neha.chauhan735@example.com,+91 9939750364,1976-11-12,Surat,Gujarat,2022-11-16 15:49:51,Daily Spender,iPhone 13,False
+359,Karan,Sharma,karan.sharma390@example.com,+91 6532471315,1959-12-18,Mumbai,Maharashtra,2023-12-25 15:49:51,Student,iPhone 13,False
+360,Priya,Chauhan,priya.chauhan402@example.com,+91 7583318057,1976-08-03,Ahmedabad,Gujarat,2023-11-25 15:49:51,Daily Spender,Samsung Galaxy S23,True
+361,Varun,Bose,varun.bose428@example.com,+91 9677055015,1999-07-02,Ahmedabad,Gujarat,2024-04-02 15:49:51,Daily Spender,Windows PC,False
+362,Karan,Menon,karan.menon756@example.com,+91 7295934324,1990-07-21,Jaipur,Rajasthan,2025-09-04 15:49:51,Daily Spender,MacBook Air,False
+363,Aarav,Gupta,aarav.gupta637@example.com,+91 6554918169,1996-09-18,Surat,Gujarat,2024-08-18 15:49:51,High Roller,iPhone 15,False
+364,Rohan,Gupta,rohan.gupta857@example.com,+91 6934674819,2001-06-18,Mumbai,Maharashtra,2024-11-15 15:49:51,High Roller,Windows PC,False
+365,Priya,Chauhan,priya.chauhan290@example.com,+91 9845493511,1986-11-10,Chennai,Tamil Nadu,2023-03-11 15:49:51,Student,Samsung Galaxy S23,False
+366,Priya,Nair,priya.nair45@example.com,+91 9930721657,1947-06-09,Ahmedabad,Gujarat,2023-10-11 15:49:51,High Roller,Samsung Galaxy S23,False
+367,Riya,Patel,riya.patel145@example.com,+91 9093235808,1999-06-17,Surat,Gujarat,2024-01-14 15:49:51,Student,iPhone 13,True
+368,Varun,Sharma,varun.sharma712@example.com,+91 8612325849,1968-01-18,Mumbai,Maharashtra,2023-10-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+369,Aarav,Gupta,aarav.gupta359@example.com,+91 7552938386,1986-07-24,Pune,Maharashtra,2026-02-23 15:49:51,Daily Spender,iPhone 13,False
+370,Pooja,Verma,pooja.verma25@example.com,+91 7804288497,1981-03-12,Pune,Maharashtra,2024-01-31 15:49:51,Daily Spender,iPhone 13,False
+371,Aarav,Patel,aarav.patel334@example.com,+91 6503355362,1971-04-27,Mumbai,Maharashtra,2023-04-06 15:49:51,Daily Spender,MacBook Air,False
+372,Priya,Bose,priya.bose190@example.com,+91 6899394554,1997-12-27,Jaipur,Rajasthan,2023-05-25 15:49:51,Student,iPhone 13,False
+373,Varun,Bose,varun.bose514@example.com,+91 8663185426,1964-12-04,Pune,Maharashtra,2024-05-19 15:49:51,High Roller,Samsung Galaxy S23,False
+374,Amit,Nair,amit.nair67@example.com,+91 6577940229,1947-05-30,Hyderabad,Telangana,2026-04-13 15:49:51,High Roller,iPhone 15,False
+375,Pooja,Menon,pooja.menon662@example.com,+91 9152832117,1971-01-09,Bengaluru,Karnataka,2024-01-19 15:49:51,Student,Windows PC,False
+376,Riya,Bose,riya.bose879@example.com,+91 7291369056,1974-06-12,Kolkata,West Bengal,2026-07-12 15:49:51,Daily Spender,MacBook Air,False
+377,Aditya,Rao,aditya.rao34@example.com,+91 7379724074,1952-03-26,Bengaluru,Karnataka,2025-05-06 15:49:51,Daily Spender,iPhone 15,False
+378,Amit,Menon,amit.menon63@example.com,+91 9165494409,1969-09-21,Bengaluru,Karnataka,2026-07-24 15:49:51,Student,Samsung Galaxy S23,False
+379,Priya,Bose,priya.bose207@example.com,+91 8015039760,1985-03-27,Surat,Gujarat,2022-12-18 15:49:51,Daily Spender,MacBook Air,False
+380,Ananya,Patel,ananya.patel567@example.com,+91 8713469223,1977-10-30,Pune,Maharashtra,2026-02-23 15:49:51,High Roller,Samsung Galaxy S23,False
+381,Rohan,Menon,rohan.menon398@example.com,+91 6360478135,1991-01-08,Pune,Maharashtra,2023-09-28 15:49:51,Daily Spender,MacBook Air,False
+382,Varun,Rao,varun.rao127@example.com,+91 9484678054,1997-02-18,Surat,Gujarat,2026-03-07 15:49:51,Daily Spender,Windows PC,False
+383,Vikram,Iyer,vikram.iyer310@example.com,+91 8619494460,1957-02-03,Ahmedabad,Gujarat,2024-11-15 15:49:51,Daily Spender,MacBook Air,False
+384,Pooja,Chauhan,pooja.chauhan759@example.com,+91 6837847825,1957-06-26,Chennai,Tamil Nadu,2024-01-04 15:49:51,Student,iPhone 15,False
+385,Priya,Deshmukh,priya.deshmukh249@example.com,+91 9955344933,1977-07-23,Bengaluru,Karnataka,2022-12-05 15:49:51,Student,iPhone 13,False
+386,Amit,Rao,amit.rao880@example.com,+91 8539847526,1973-06-22,Pune,Maharashtra,2026-07-08 15:49:51,Student,iPhone 15,False
+387,Amit,Joshi,amit.joshi964@example.com,+91 7415807793,1981-06-03,Kolkata,West Bengal,2025-04-20 15:49:51,Student,MacBook Air,False
+388,Riya,Bose,riya.bose596@example.com,+91 8126125403,1946-07-29,Ahmedabad,Gujarat,2026-06-06 15:49:51,Daily Spender,iPhone 15,False
+389,Rahul,Singh,rahul.singh14@example.com,+91 8084517968,1959-12-26,Bengaluru,Karnataka,2023-07-22 15:49:51,Student,Samsung Galaxy S23,False
+390,Rahul,Iyer,rahul.iyer501@example.com,+91 8720475050,2007-05-09,Bengaluru,Karnataka,2025-08-29 15:49:51,Student,iPhone 15,False
+391,Rahul,Sharma,rahul.sharma721@example.com,+91 6167245067,1958-05-30,Hyderabad,Telangana,2025-03-11 15:49:51,Daily Spender,iPhone 15,False
+392,Aarav,Verma,aarav.verma26@example.com,+91 9161352272,1992-03-14,Mumbai,Maharashtra,2025-03-13 15:49:51,Student,iPhone 13,False
+393,Rahul,Das,rahul.das527@example.com,+91 7667115551,2004-07-25,Mumbai,Maharashtra,2026-06-11 15:49:51,Student,Samsung Galaxy S23,False
+394,Ananya,Patel,ananya.patel638@example.com,+91 9369865977,1967-08-21,Kolkata,West Bengal,2025-06-27 15:49:51,Student,Windows PC,False
+395,Aarav,Reddy,aarav.reddy846@example.com,+91 6650268555,1992-05-04,Ahmedabad,Gujarat,2025-07-24 15:49:51,Daily Spender,MacBook Air,False
+396,Neha,Bose,neha.bose90@example.com,+91 8133319545,1970-03-16,Ahmedabad,Gujarat,2023-04-21 15:49:51,Daily Spender,iPhone 13,True
+397,Neha,Iyer,neha.iyer609@example.com,+91 7052476949,2000-08-13,Hyderabad,Telangana,2026-03-31 15:49:51,Daily Spender,iPhone 15,False
+398,Ananya,Verma,ananya.verma226@example.com,+91 6377550257,2004-02-07,Surat,Gujarat,2023-03-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+399,Ananya,Bose,ananya.bose68@example.com,+91 8777220043,1955-04-11,Surat,Gujarat,2023-06-15 15:49:51,Daily Spender,MacBook Air,False
+400,Riya,Verma,riya.verma267@example.com,+91 8464861601,2004-04-30,Ahmedabad,Gujarat,2024-06-16 15:49:51,Daily Spender,Samsung Galaxy S23,True
+401,Pooja,Das,pooja.das371@example.com,+91 7352115648,1987-07-18,Ahmedabad,Gujarat,2022-11-17 15:49:51,Daily Spender,MacBook Air,False
+402,Ananya,Gupta,ananya.gupta43@example.com,+91 9583416545,1962-11-13,Pune,Maharashtra,2023-04-28 15:49:51,Student,Samsung Galaxy S23,True
+403,Kavya,Reddy,kavya.reddy362@example.com,+91 6776763563,1999-12-23,Chennai,Tamil Nadu,2023-11-29 15:49:51,Daily Spender,iPhone 13,False
+404,Pooja,Joshi,pooja.joshi174@example.com,+91 9238051120,1967-01-12,Chennai,Tamil Nadu,2024-07-01 15:49:51,High Roller,Windows PC,False
+405,Kavya,Bose,kavya.bose101@example.com,+91 6100517699,1964-02-14,Surat,Gujarat,2026-06-04 15:49:51,Daily Spender,iPhone 13,True
+406,Varun,Sharma,varun.sharma925@example.com,+91 9923456383,1990-05-14,Surat,Gujarat,2026-05-02 15:49:51,High Roller,iPhone 15,False
+407,Aditya,Patel,aditya.patel68@example.com,+91 6526361678,1962-11-25,Surat,Gujarat,2024-07-16 15:49:51,Daily Spender,iPhone 13,False
+408,Rahul,Nair,rahul.nair590@example.com,+91 6951587961,1977-04-21,Mumbai,Maharashtra,2022-11-18 15:49:51,Student,iPhone 15,False
+409,Rahul,Das,rahul.das698@example.com,+91 6268450856,1955-10-18,Delhi,Delhi,2025-09-26 15:49:51,Daily Spender,Windows PC,False
+410,Aarav,Bose,aarav.bose21@example.com,+91 8469397898,1953-09-14,Bengaluru,Karnataka,2022-11-17 15:49:51,Student,iPhone 15,False
+411,Rahul,Gupta,rahul.gupta927@example.com,+91 7532598001,1950-10-22,Surat,Gujarat,2026-06-11 15:49:51,Daily Spender,iPhone 13,False
+412,Pooja,Chauhan,pooja.chauhan32@example.com,+91 6607816684,1974-08-02,Hyderabad,Telangana,2024-04-13 15:49:51,High Roller,iPhone 13,False
+413,Priya,Deshmukh,priya.deshmukh917@example.com,+91 6627406573,2000-02-02,Bengaluru,Karnataka,2022-10-20 15:49:51,Daily Spender,Windows PC,False
+414,Ananya,Gupta,ananya.gupta285@example.com,+91 6547250348,1984-11-07,Mumbai,Maharashtra,2023-04-29 15:49:51,Daily Spender,iPhone 15,False
+415,Rohan,Sharma,rohan.sharma581@example.com,+91 9815557627,1974-09-14,Bengaluru,Karnataka,2026-06-21 15:49:51,High Roller,MacBook Air,False
+416,Karan,Joshi,karan.joshi302@example.com,+91 8443341113,2004-03-30,Kolkata,West Bengal,2025-02-23 15:49:51,Daily Spender,MacBook Air,False
+417,Varun,Das,varun.das15@example.com,+91 8057297777,1955-06-09,Chennai,Tamil Nadu,2025-03-27 15:49:51,Daily Spender,iPhone 13,False
+418,Pooja,Reddy,pooja.reddy500@example.com,+91 7860692024,1973-07-03,Surat,Gujarat,2026-04-02 15:49:51,High Roller,Windows PC,False
+419,Varun,Deshmukh,varun.deshmukh716@example.com,+91 8662371660,1975-10-23,Ahmedabad,Gujarat,2022-12-21 15:49:51,Daily Spender,MacBook Air,False
+420,Aditya,Patel,aditya.patel900@example.com,+91 8089060611,1990-08-14,Ahmedabad,Gujarat,2026-03-01 15:49:51,Daily Spender,iPhone 13,False
+421,Priya,Das,priya.das226@example.com,+91 9530552113,1987-06-26,Mumbai,Maharashtra,2024-12-30 15:49:51,Student,Windows PC,False
+422,Amit,Verma,amit.verma543@example.com,+91 9473381170,1997-02-11,Chennai,Tamil Nadu,2025-06-24 15:49:51,Student,MacBook Air,True
+423,Rahul,Menon,rahul.menon374@example.com,+91 6948095336,1956-12-02,Pune,Maharashtra,2024-02-09 15:49:51,High Roller,Samsung Galaxy S23,False
+424,Priya,Reddy,priya.reddy167@example.com,+91 8085636288,1986-06-08,Surat,Gujarat,2024-09-28 15:49:51,Daily Spender,Windows PC,False
+425,Rohan,Verma,rohan.verma207@example.com,+91 6842353332,1991-08-23,Mumbai,Maharashtra,2022-09-05 15:49:51,Daily Spender,iPhone 13,False
+426,Riya,Gupta,riya.gupta392@example.com,+91 9740273296,1995-06-13,Surat,Gujarat,2026-07-12 15:49:51,Daily Spender,iPhone 15,False
+427,Rohan,Reddy,rohan.reddy61@example.com,+91 9075418224,1963-07-14,Mumbai,Maharashtra,2025-10-27 15:49:51,Daily Spender,MacBook Air,True
+428,Aarav,Deshmukh,aarav.deshmukh780@example.com,+91 9774867577,1953-01-17,Surat,Gujarat,2025-06-26 15:49:51,Student,iPhone 15,False
+429,Karan,Bose,karan.bose844@example.com,+91 6030989476,1954-03-22,Jaipur,Rajasthan,2023-04-14 15:49:51,Daily Spender,iPhone 13,False
+430,Karan,Nair,karan.nair828@example.com,+91 9880527436,1982-06-07,Surat,Gujarat,2025-01-08 15:49:51,Student,Samsung Galaxy S23,False
+431,Aarav,Rao,aarav.rao371@example.com,+91 9519645074,2000-10-09,Kolkata,West Bengal,2024-06-01 15:49:51,Daily Spender,Windows PC,True
+432,Neha,Rao,neha.rao536@example.com,+91 7970795865,1965-04-14,Surat,Gujarat,2026-02-01 15:49:51,Daily Spender,Windows PC,False
+433,Neha,Chauhan,neha.chauhan918@example.com,+91 7136579051,1947-03-02,Delhi,Delhi,2024-12-25 15:49:51,Daily Spender,iPhone 13,False
+434,Aditya,Joshi,aditya.joshi589@example.com,+91 8123486081,1999-05-17,Jaipur,Rajasthan,2025-11-21 15:49:51,Daily Spender,Windows PC,False
+435,Amit,Nair,amit.nair93@example.com,+91 6110395207,1949-10-05,Chennai,Tamil Nadu,2024-05-30 15:49:51,Student,MacBook Air,False
+436,Vikram,Sharma,vikram.sharma934@example.com,+91 8044102383,1997-04-28,Mumbai,Maharashtra,2024-04-01 15:49:51,Daily Spender,Samsung Galaxy S23,False
+437,Sneha,Deshmukh,sneha.deshmukh856@example.com,+91 9802963954,1973-12-30,Bengaluru,Karnataka,2025-11-28 15:49:51,Daily Spender,iPhone 15,False
+438,Rohan,Menon,rohan.menon408@example.com,+91 9818884811,2006-07-08,Delhi,Delhi,2025-10-26 15:49:51,Daily Spender,Windows PC,False
+439,Aditya,Chauhan,aditya.chauhan931@example.com,+91 7158791102,1998-06-26,Chennai,Tamil Nadu,2026-04-01 15:49:51,Student,iPhone 13,False
+440,Sneha,Patel,sneha.patel894@example.com,+91 6951929728,1977-10-12,Kolkata,West Bengal,2023-07-28 15:49:51,Daily Spender,Samsung Galaxy S23,False
+441,Aarav,Rao,aarav.rao275@example.com,+91 7743907512,1993-10-13,Jaipur,Rajasthan,2022-10-02 15:49:51,Student,MacBook Air,False
+442,Karan,Nair,karan.nair547@example.com,+91 6222948227,1970-10-30,Bengaluru,Karnataka,2023-06-08 15:49:51,Daily Spender,MacBook Air,True
+443,Rahul,Reddy,rahul.reddy340@example.com,+91 8307489220,1996-04-20,Kolkata,West Bengal,2026-05-06 15:49:51,Student,Samsung Galaxy S23,False
+444,Riya,Deshmukh,riya.deshmukh844@example.com,+91 6206559219,1963-10-09,Delhi,Delhi,2025-11-24 15:49:51,Daily Spender,Windows PC,True
+445,Priya,Das,priya.das883@example.com,+91 8601274634,1971-04-24,Hyderabad,Telangana,2023-08-07 15:49:51,Daily Spender,iPhone 15,True
+446,Kavya,Deshmukh,kavya.deshmukh658@example.com,+91 7490736546,1979-04-27,Jaipur,Rajasthan,2026-06-12 15:49:51,Daily Spender,Samsung Galaxy S23,False
+447,Vikram,Rao,vikram.rao922@example.com,+91 8376465494,1984-05-24,Mumbai,Maharashtra,2022-12-27 15:49:51,Student,iPhone 13,False
+448,Neha,Menon,neha.menon696@example.com,+91 7154896328,1981-05-15,Surat,Gujarat,2024-05-19 15:49:51,High Roller,Windows PC,False
+449,Varun,Bose,varun.bose509@example.com,+91 9668042358,1980-12-09,Jaipur,Rajasthan,2025-07-26 15:49:51,Daily Spender,iPhone 15,True
+450,Ananya,Gupta,ananya.gupta857@example.com,+91 9515329504,1969-03-11,Jaipur,Rajasthan,2022-11-01 15:49:51,Student,iPhone 13,False
+451,Aarav,Bose,aarav.bose464@example.com,+91 7173957711,2002-12-04,Surat,Gujarat,2025-04-26 15:49:51,Student,Windows PC,False
+452,Neha,Verma,neha.verma909@example.com,+91 7440460342,1992-06-24,Kolkata,West Bengal,2023-01-15 15:49:51,Student,MacBook Air,False
+453,Riya,Gupta,riya.gupta153@example.com,+91 7206902428,1981-03-17,Surat,Gujarat,2025-08-10 15:49:51,Daily Spender,Samsung Galaxy S23,True
+454,Karan,Verma,karan.verma856@example.com,+91 7839655315,1991-11-21,Bengaluru,Karnataka,2024-07-13 15:49:51,Student,Windows PC,False
+455,Rahul,Menon,rahul.menon510@example.com,+91 6396493751,1979-04-18,Kolkata,West Bengal,2022-10-29 15:49:51,Daily Spender,MacBook Air,False
+456,Kavya,Singh,kavya.singh875@example.com,+91 9901912670,1990-10-09,Jaipur,Rajasthan,2023-02-06 15:49:51,Daily Spender,Windows PC,True
+457,Aarav,Reddy,aarav.reddy29@example.com,+91 6648009272,1954-03-09,Bengaluru,Karnataka,2025-05-08 15:49:51,Student,Samsung Galaxy S23,True
+458,Riya,Das,riya.das860@example.com,+91 6116521560,1952-07-08,Mumbai,Maharashtra,2023-10-02 15:49:51,Daily Spender,MacBook Air,False
+459,Ananya,Reddy,ananya.reddy185@example.com,+91 7992744570,1951-05-04,Delhi,Delhi,2026-04-06 15:49:51,Daily Spender,iPhone 15,True
+460,Pooja,Rao,pooja.rao791@example.com,+91 7523014826,1979-12-07,Chennai,Tamil Nadu,2025-07-04 15:49:51,Daily Spender,Windows PC,False
+461,Aditya,Das,aditya.das211@example.com,+91 9294696067,1963-07-18,Bengaluru,Karnataka,2025-08-26 15:49:51,Daily Spender,Samsung Galaxy S23,False
+462,Priya,Menon,priya.menon70@example.com,+91 9290730577,1996-10-16,Chennai,Tamil Nadu,2025-06-01 15:49:51,Daily Spender,Windows PC,False
+463,Varun,Das,varun.das408@example.com,+91 7041147254,1992-10-12,Pune,Maharashtra,2026-06-27 15:49:51,Student,Samsung Galaxy S23,False
+464,Aarav,Das,aarav.das982@example.com,+91 7616624514,1968-06-16,Kolkata,West Bengal,2026-01-07 15:49:51,Daily Spender,iPhone 13,False
+465,Aarav,Nair,aarav.nair599@example.com,+91 9242508506,1975-07-29,Kolkata,West Bengal,2023-04-26 15:49:51,Student,iPhone 13,False
+466,Pooja,Joshi,pooja.joshi852@example.com,+91 9277666238,1957-07-28,Hyderabad,Telangana,2025-05-07 15:49:51,High Roller,iPhone 13,False
+467,Pooja,Verma,pooja.verma345@example.com,+91 9939138297,1958-07-17,Kolkata,West Bengal,2023-11-15 15:49:51,Student,Windows PC,True
+468,Neha,Gupta,neha.gupta257@example.com,+91 7977246449,1978-02-11,Bengaluru,Karnataka,2022-09-03 15:49:51,High Roller,Samsung Galaxy S23,False
+469,Priya,Singh,priya.singh456@example.com,+91 6910970389,2007-07-24,Bengaluru,Karnataka,2024-03-31 15:49:51,Daily Spender,iPhone 13,False
+470,Varun,Bose,varun.bose683@example.com,+91 9991494708,2003-03-19,Hyderabad,Telangana,2025-12-09 15:49:51,Daily Spender,iPhone 15,True
+471,Rohan,Deshmukh,rohan.deshmukh52@example.com,+91 7561149700,1982-03-18,Ahmedabad,Gujarat,2024-08-29 15:49:51,Daily Spender,iPhone 13,False
+472,Vikram,Das,vikram.das491@example.com,+91 7207971010,1974-09-18,Ahmedabad,Gujarat,2024-06-04 15:49:51,Daily Spender,Samsung Galaxy S23,False
+473,Amit,Gupta,amit.gupta227@example.com,+91 8271020743,1956-04-15,Chennai,Tamil Nadu,2024-07-07 15:49:51,Daily Spender,iPhone 13,False
+474,Priya,Joshi,priya.joshi388@example.com,+91 9861063322,1981-10-17,Ahmedabad,Gujarat,2024-05-28 15:49:51,Daily Spender,Windows PC,False
+475,Karan,Nair,karan.nair468@example.com,+91 7087339372,1955-08-08,Kolkata,West Bengal,2026-02-05 15:49:51,Student,Windows PC,False
+476,Priya,Joshi,priya.joshi802@example.com,+91 9379199026,2001-07-30,Kolkata,West Bengal,2023-02-06 15:49:51,Student,Samsung Galaxy S23,False
+477,Vikram,Reddy,vikram.reddy587@example.com,+91 8659043693,1991-12-02,Bengaluru,Karnataka,2026-05-01 15:49:51,High Roller,MacBook Air,False
+478,Sneha,Bose,sneha.bose156@example.com,+91 8983649157,1969-02-23,Jaipur,Rajasthan,2024-05-29 15:49:51,Student,MacBook Air,False
+479,Sneha,Reddy,sneha.reddy11@example.com,+91 7723696712,1984-05-10,Ahmedabad,Gujarat,2026-05-09 15:49:51,Student,iPhone 15,False
+480,Rahul,Nair,rahul.nair621@example.com,+91 6502293047,2004-04-23,Chennai,Tamil Nadu,2023-02-27 15:49:51,Daily Spender,MacBook Air,False
+481,Pooja,Reddy,pooja.reddy674@example.com,+91 7006540157,2001-05-16,Bengaluru,Karnataka,2025-07-04 15:49:51,Daily Spender,Samsung Galaxy S23,False
+482,Riya,Sharma,riya.sharma975@example.com,+91 7975360085,1984-05-15,Chennai,Tamil Nadu,2025-06-13 15:49:51,Daily Spender,Windows PC,True
+483,Karan,Joshi,karan.joshi440@example.com,+91 9818705361,1987-05-13,Chennai,Tamil Nadu,2026-05-25 15:49:51,High Roller,MacBook Air,False
+484,Kavya,Patel,kavya.patel823@example.com,+91 9175968834,1952-03-02,Pune,Maharashtra,2024-02-11 15:49:51,Daily Spender,iPhone 15,False
+485,Sneha,Nair,sneha.nair317@example.com,+91 6932393427,1957-06-08,Jaipur,Rajasthan,2026-07-01 15:49:51,Student,iPhone 15,False
+486,Karan,Singh,karan.singh901@example.com,+91 7730639099,2006-11-29,Kolkata,West Bengal,2025-01-18 15:49:51,Daily Spender,iPhone 13,True
+487,Aarav,Nair,aarav.nair220@example.com,+91 6152266800,1963-10-06,Jaipur,Rajasthan,2026-07-24 15:49:51,Daily Spender,Samsung Galaxy S23,False
+488,Kavya,Singh,kavya.singh146@example.com,+91 8380076699,1961-05-02,Mumbai,Maharashtra,2026-06-19 15:49:51,Student,iPhone 15,False
+489,Pooja,Das,pooja.das382@example.com,+91 7855445131,1972-03-09,Ahmedabad,Gujarat,2024-09-24 15:49:51,High Roller,Windows PC,False
+490,Varun,Verma,varun.verma266@example.com,+91 8893471418,1969-11-28,Surat,Gujarat,2026-05-06 15:49:51,Student,iPhone 13,False
+491,Rahul,Bose,rahul.bose941@example.com,+91 7893400356,2000-07-14,Bengaluru,Karnataka,2023-08-18 15:49:51,Daily Spender,iPhone 13,False
+492,Karan,Menon,karan.menon517@example.com,+91 7011106097,2003-06-12,Bengaluru,Karnataka,2023-08-15 15:49:51,Daily Spender,Windows PC,True
+493,Rohan,Rao,rohan.rao687@example.com,+91 9408953974,1970-02-23,Surat,Gujarat,2023-01-17 15:49:51,Student,iPhone 13,False
+494,Priya,Chauhan,priya.chauhan523@example.com,+91 7741367698,1995-12-10,Mumbai,Maharashtra,2025-06-02 15:49:51,Daily Spender,Samsung Galaxy S23,False
+495,Ananya,Sharma,ananya.sharma466@example.com,+91 9352308525,2000-09-13,Ahmedabad,Gujarat,2024-04-29 15:49:51,Student,MacBook Air,False
+496,Priya,Nair,priya.nair349@example.com,+91 9486690176,1949-11-03,Bengaluru,Karnataka,2022-10-09 15:49:51,High Roller,Samsung Galaxy S23,False
+497,Amit,Menon,amit.menon303@example.com,+91 6227993020,1981-09-11,Surat,Gujarat,2023-04-02 15:49:51,High Roller,Windows PC,False
+498,Varun,Singh,varun.singh935@example.com,+91 8338528478,1946-08-17,Pune,Maharashtra,2026-03-10 15:49:51,Daily Spender,Samsung Galaxy S23,False
+499,Vikram,Gupta,vikram.gupta367@example.com,+91 8547860870,1977-09-15,Hyderabad,Telangana,2024-01-16 15:49:51,Daily Spender,iPhone 13,False
+500,Aditya,Das,aditya.das133@example.com,+91 7261424166,2006-06-04,Mumbai,Maharashtra,2026-06-05 15:49:51,Student,iPhone 15,False

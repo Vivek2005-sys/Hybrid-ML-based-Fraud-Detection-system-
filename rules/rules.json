@@ -1,0 +1,165 @@
+{
+  "rules": [
+    {
+      "rule_id": "1",
+      "name": "High_Velocity_Window",
+      "description": "Trigger if a customer makes 3 or more transactions in 30 minutes",
+      "logic": {
+        ">=": [
+          {
+            "var": "txn_count_30m"
+          },
+          3
+        ]
+      },
+      "score": 30.0
+    },
+    {
+      "rule_id": "2",
+      "name": "Velocity_Amount",
+      "description": "Trigger if a customer makes 5000 or more transactions total amount in 30 minutes",
+      "logic": {
+        ">=": [
+          {
+            "var": "total_amount_30m"
+          },
+          5000
+        ]
+      },
+      "score": 30.0
+    },
+    {
+      "rule_id": "3",
+      "name": "High_Value_Risky_Category",
+      "description": "Trigger if spending > $1000 in Electronics, Jewelry, or Travel in 30 minutes",
+      "logic": {
+        "and": [
+          {
+            "in": [
+              {
+                "var": "merchant_category"
+              },
+              [
+                "Electronics",
+                "Transport"
+              ]
+            ]
+          },
+          {
+            ">=": [
+              {
+                "var": "total_amount_30m"
+              },
+              1000.0
+            ]
+          }
+        ]
+      },
+      "score": 40.0
+    },
+    {
+      "rule_id": "4",
+      "name": "VPN_International_Mismatch",
+      "description": "Trigger if user is on a VPN while doing an international transaction",
+      "logic": {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "is_active_vpn"
+              },
+              true
+            ]
+          },
+          {
+            "==": [
+              {
+                "var": "is_international"
+              },
+              true
+            ]
+          }
+        ]
+      },
+      "score": 60.0
+    },
+    {
+      "rule_id": "5",
+      "name": "Night_Owl_VPN",
+      "description": "Trigger if a transaction occurs between midnight and 5 AM while using an active VPN.",
+      "logic": {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "is_active_vpn"
+              },
+              true
+            ]
+          },
+          {
+            "<": [
+              {
+                "var": "hour"
+              },
+              5
+            ]
+          }
+        ]
+      },
+      "score": 40.0
+    },
+    {
+      "rule_id": "6",
+      "name": "International_High_Limit",
+      "description": "Trigger if an international transaction exceeds $1,500.",
+      "logic": {
+        "and": [
+          {
+            "==": [
+              {
+                "var": "is_international"
+              },
+              true
+            ]
+          },
+          {
+            ">": [
+              {
+                "var": "amount"
+              },
+              2000.0
+            ]
+          }
+        ]
+      },
+      "score": 60.0
+    },
+    {
+      "rule_id": "7",
+      "name": "Late_Night_Transaction",
+      "description": "Trigger if the transaction happens between midnight and 4 AM",
+      "logic": {
+        "and": [
+          {
+            ">=": [
+              {
+                "var": "hour"
+              },
+              0
+            ]
+          },
+          {
+            "<=": [
+              {
+                "var": "hour"
+              },
+              4
+            ]
+          }
+        ]
+      },
+      "score": 30.0
+    }
+  ]
+}

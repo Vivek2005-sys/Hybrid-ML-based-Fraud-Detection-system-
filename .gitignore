@@ -1,0 +1,19 @@
+# Python / Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data and CSV files (exclude large generated logs/data, but keep templates if needed)
+*.csv
+!customer_data_sample.csv
+
+# OS generated files
+.DS_Store
+Thumbs.db
