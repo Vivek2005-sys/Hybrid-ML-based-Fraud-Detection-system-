@@ -27,10 +27,9 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
         'gap_volatility_5tx_clean': 0.0,
         'merchant_diversity_7d': 1,
         'hour_of_day': txn_time.hour,
-        'day_of_week': txn_time.weekday(),
-        'is_weekend': 1 if txn_time.weekday() >= 5 else 0,
         'is_night_txn': 1 if txn_time.hour < 5 else 0,
         'is_high_risk_category': 1 if current_merchant in ['Luxury Goods', 'Financial Services', 'Gaming'] else 0
+        
 
     }
     
