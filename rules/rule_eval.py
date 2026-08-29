@@ -8,9 +8,9 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import engine 
 
-print("Executing SQL Feature Extraction on 1.5M rows (This will take 1-2 minutes)...")
+print("Executing SQL Feature Extraction with Profile Window Functions on transactions...")
 
-# We use PostgreSQL Window Functions to calculate the 30-minute rolling features 
+# SQL Query calculating 30m rolling features and 7d/30d historical profiles
 query = text("""
     SELECT 
         id, 
@@ -22,71 +22,129 @@ query = text("""
         transaction_date, 
         is_fraud, 
         
-        -- Calculate Rolling 30m Count
+        -- Rolling 30m Velocity Features
         COUNT(id) OVER (
             PARTITION BY customer_id 
             ORDER BY transaction_date 
             RANGE BETWEEN INTERVAL '30 minutes' PRECEDING AND CURRENT ROW
         ) AS velocity_30m_count,
         
-        -- Calculate Rolling 30m Amount
         SUM(amount) OVER (
             PARTITION BY customer_id 
             ORDER BY transaction_date 
             RANGE BETWEEN INTERVAL '30 minutes' PRECEDING AND CURRENT ROW
-        ) AS total_amount_30m
-        
+        ) AS total_amount_30m,
+
+        -- 7-Day Profile Features (Excluding Current Transaction)
+        COUNT(id) OVER (
+            PARTITION BY customer_id 
+            ORDER BY transaction_date 
+            RANGE BETWEEN INTERVAL '7 days' PRECEDING AND INTERVAL '1 second' PRECEDING
+        ) AS p7d_txn_count,
+
+        COALESCE(SUM(amount) OVER (
+            PARTITION BY customer_id 
+            ORDER BY transaction_date 
+            RANGE BETWEEN INTERVAL '7 days' PRECEDING AND INTERVAL '1 second' PRECEDING
+        ), 0.0) AS p7d_sum_amount,
+
+        -- 30-Day Profile Features (Excluding Current Transaction)
+        COUNT(id) OVER (
+            PARTITION BY customer_id 
+            ORDER BY transaction_date 
+            RANGE BETWEEN INTERVAL '30 days' PRECEDING AND INTERVAL '1 second' PRECEDING
+        ) AS p30d_txn_count,
+
+        COALESCE(AVG(amount) OVER (
+            PARTITION BY customer_id 
+            ORDER BY transaction_date 
+            RANGE BETWEEN INTERVAL '30 days' PRECEDING AND INTERVAL '1 second' PRECEDING
+        ), 0.0) AS p30d_avg_amount
+
     FROM transactions
 """)
 
-# Load the aggregated data into a Pandas DataFrame
 with engine.connect() as conn:
     df = pd.read_sql(query, conn)
 
 print(f"Successfully loaded {len(df):,} transactions into memory.")
-print("Evaluating Custom Rules...")
+print("Evaluating All 10 Rules...")
 
-# Initialize rule flags
-df['rule_triggered'] = False
 df['transaction_date'] = pd.to_datetime(df['transaction_date'])
+df['hour'] = df['transaction_date'].dt.hour
 
-# Rule 1: High_Velocity_Window (VEL_001)
-df.loc[df['velocity_30m_count'] >= 3, 'rule_triggered'] = True
+# Evaluate Individual Rules
+r1 = df['velocity_30m_count'] >= 3
+r2 = df['total_amount_30m'] >= 10000
+r3 = (df['total_amount_30m'] >= 5000) & (df['merchant_category'].isin(['Electronics', 'Transport']))
+r4 = (df['is_active_vpn'] == True) & (df['is_international'] == True)
+r5 = (df['is_active_vpn'] == True) & (df['hour'] < 5)
+r6 = (df['is_international'] == True) & (df['amount'] > 5000.0)
+r7 = (df['hour'] >= 0) & (df['hour'] <= 4)
+r8 = (df['p30d_txn_count'] > 0) & (df['amount'] > (df['p30d_avg_amount'] * 6.0))
+r9 = (df['p7d_txn_count'] > 0) & (df['total_amount_30m'] >= (df['p7d_sum_amount'] * 0.9))
+r10 = (df['p30d_txn_count'] == 0) & (df['amount'] >= 1000.0)
 
-# Rule 2: Velocity_Amount (VEL_002)
-df.loc[df['total_amount_30m'] >= 5000, 'rule_triggered'] = True
+# Store per-rule triggers for audit reporting
+df['rule_1'] = r1
+df['rule_2'] = r2
+df['rule_3'] = r3
+df['rule_4'] = r4
+df['rule_5'] = r5
+df['rule_6'] = r6
+df['rule_7'] = r7
+df['rule_8'] = r8
+df['rule_9'] = r9
+df['rule_10'] = r10
 
-# Rule 3: High_Value_Risky_Category (CAT_AMT_001)
-risky_cats = ['Electronics', 'Transport']
-df.loc[(df['total_amount_30m'] >= 1000) & (df['merchant_category'].isin(risky_cats)), 'rule_triggered'] = True
-
-# Rule 4: VPN_International_Mismatch (GEO_001)
-df.loc[(df['is_active_vpn'] == True) & (df['is_international'] == True), 'rule_triggered'] = True
-
-# Rule 5: Late_Night_Transaction (TIME_001)
-df.loc[(df['transaction_date'].dt.hour >= 0) & (df['transaction_date'].dt.hour <= 4), 'rule_triggered'] = True
+# Master rule trigger
+df['rule_triggered'] = r1 | r2 | r3 | r4 | r5 | r6 | r7 | r8 | r9 | r10
 
 print("\n==================================================")
-print("            WEEK 3: RULE ENGINE RECALL            ")
+print("             RULE ENGINE EVALUATION SUMMARY       ")
 print("==================================================\n")
 
-# Filter to ONLY the actual fraud transactions to calculate Recall
 fraud_df = df[df['is_fraud'] == 1]
-
-# Calculate overall recall
 total_fraud = len(fraud_df)
+
 if total_fraud > 0:
     caught_by_rules = fraud_df['rule_triggered'].sum()
     missed_by_rules = total_fraud - caught_by_rules
     overall_recall = (caught_by_rules / total_fraud) * 100
 
-    print(f"Total Fraud Transactions: {total_fraud:,}")
-    print(f"Caught by Rule Engine:    {caught_by_rules:,}")
-    print(f"Missed (The ML Target):   {missed_by_rules:,}")
-    print(f"Overall Recall:           {overall_recall:.2f}%\n")
+    print(f"Total Fraud Transactions : {total_fraud:,}")
+    print(f"Caught by Rule Engine    : {caught_by_rules:,}")
+    print(f"Missed (ML Target)       : {missed_by_rules:,}")
+    print(f"Overall Recall           : {overall_recall:.2f}%\n")
 
-    # Group by Merchant Category to show exactly WHAT slipped through
-    print("--- Recall Per Merchant Category ---")
+    print("--- Performance Breakdown per Rule ---")
+    rule_names = {
+        'rule_1': 'R1: High_Velocity_Window',
+        'rule_2': 'R2: Velocity_Amount',
+        'rule_3': 'R3: High_Value_Risky_Category',
+        'rule_4': 'R4: VPN_International_Mismatch',
+        'rule_5': 'R5: Night_Owl_VPN',
+        'rule_6': 'R6: International_High_Limit',
+        'rule_7': 'R7: Late_Night_Transaction',
+        'rule_8': 'R8: Amount_Spike_vs_30D_Avg',
+        'rule_9': 'R9: Rapid_Spend_vs_7D_Total',
+        'rule_10': 'R10: Dormant_High_Value_Txn'
+    }
+
+    rule_stats = []
+    for col, name in rule_names.items():
+        caught = fraud_df[col].sum()
+        rule_recall = (caught / total_fraud) * 100
+        rule_stats.append({
+            'Rule Name': name,
+            'Fraud Caught': caught,
+            'Recall Contribution (%)': round(rule_recall, 2)
+        })
+
+    rule_summary_df = pd.DataFrame(rule_stats)
+    print(rule_summary_df.to_string(index=False))
+
+    print("\n--- Recall Per Merchant Category ---")
     recall_table = fraud_df.groupby('merchant_category').agg(
         Total_Fraud_Cases=('id', 'count'),
         Caught_By_Rules=('rule_triggered', 'sum')
@@ -97,4 +155,5 @@ if total_fraud > 0:
     print(recall_table.round(2).to_string())
 else:
     print("No fraud transactions found in the dataset to evaluate.")
+
 print("\n==================================================")

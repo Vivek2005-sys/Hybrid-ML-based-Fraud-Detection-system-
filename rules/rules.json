@@ -23,7 +23,7 @@
           {
             "var": "total_amount_30m"
           },
-          5000
+          10000
         ]
       },
       "score": 30.0
@@ -50,7 +50,7 @@
               {
                 "var": "total_amount_30m"
               },
-              1000.0
+              5000.0
             ]
           }
         ]
@@ -128,7 +128,7 @@
               {
                 "var": "amount"
               },
-              2000.0
+              5000.0
             ]
           }
         ]
@@ -160,6 +160,100 @@
         ]
       },
       "score": 30.0
-    }
+    },
+    [
+      {
+        "rule_id": "8",
+        "name": "Amount_Spike_vs_30D_Avg",
+        "description": "Trigger if current transaction amount is more than 3x the customer's 30-day average spend",
+        "logic": {
+          "and": [
+            {
+              ">": [
+                {
+                  "var": "p30d_txn_count"
+                },
+                0
+              ]
+            },
+            {
+              ">": [
+                {
+                  "var": "amount"
+                },
+                {
+                  "*": [
+                    {
+                      "var": "p30d_avg_amount"
+                    },
+                    6.0
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "score": 50.0
+      },
+      {
+        "rule_id": "9",
+        "name": "Rapid_Spend_vs_7D_Total",
+        "description": "Trigger if 30-minute spending exceeds 50% of the customer's entire 7-day cumulative spend",
+        "logic": {
+          "and": [
+            {
+              ">": [
+                {
+                  "var": "p7d_txn_count"
+                },
+                0
+              ]
+            },
+            {
+              ">=": [
+                {
+                  "var": "total_amount_30m"
+                },
+                {
+                  "*": [
+                    {
+                      "var": "p7d_sum_amount"
+                    },
+                    0.9
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "score": 50.0
+      },
+      {
+        "rule_id": "10",
+        "name": "Dormant_High_Value_Transaction",
+        "description": "Trigger if a user with 0 transactions in the last 30 days suddenly attempts a spend >= $1,000",
+        "logic": {
+          "and": [
+            {
+              "==": [
+                {
+                  "var": "p30d_txn_count"
+                },
+                0
+              ]
+            },
+            {
+              ">=": [
+                {
+                  "var": "amount"
+                },
+                1000.0
+              ]
+            }
+          ]
+        },
+        "score": 50.0
+      }
+    ]
   ]
 }
