@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from json_logic import jsonLogic
-from . import models
+from app import models
 from ml_features.observations import get_observation_snapshot
 
 # Load JSON Logic Rules once when the engine starts
@@ -112,10 +112,11 @@ def evaluate_transaction(db: Session, txn, txn_time: datetime):
         "txn_count_30m": current_velocity,
         "total_amount_30m": total_amount_30m,
         "merchant_category": txn.merchant_category,
-        "prior_txn_count": prior_txn_count,                               # <-- NEW
+        "prior_txn_count": prior_txn_count,
         "avg_txn_count_30m_baseline": avg_txn_count_30m_baseline
-        
     }
+    # Add all ML features (including the new 24h features) to the rule context
+    rule_context.update(ml_snapshot)
 
     # <-- NEW: Build the final Drona Pay style observations dictionary -->
     observations = {

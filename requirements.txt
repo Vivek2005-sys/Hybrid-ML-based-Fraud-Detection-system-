@@ -7,3 +7,5 @@ python-dotenv
 Faker==22.6.0
 json-logic-qubit
 scikit-learn
+xgboost
+shap

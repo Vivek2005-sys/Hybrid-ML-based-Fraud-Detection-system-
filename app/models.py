@@ -53,10 +53,10 @@ class Transaction(Base):
 
 class TransactionScore(Base):
     __tablename__ = "transaction_scores"
-    
+
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    
-    # The raw inputs you sent via Postman
+
+    # Raw Inputs
     customer_id = Column(Integer)
     amount = Column(Float)
     merchant = Column(String)
@@ -65,12 +65,12 @@ class TransactionScore(Base):
     is_active_vpn = Column(Boolean, default=False)
     is_international = Column(Boolean, default=False)
     observations = Column(JSON, default=dict)
+
+    # Consolidated Results (JSON)
+    results = Column(JSON, default=dict)
     
-    # The Rule Engine Outputs
-    total_risk_score = Column(Float, default=0.0)
-    max_rule_score = Column(Float, default=0.0)  # <-- ADD THIS LINE
-    risk_level = Column(String, default="LOW - ALLOW")
-    risk_level = Column(String, default="LOW - ALLOW")
+    # Internal State used by Rule Engine
     velocity_30m_count = Column(Integer, default=1)
-    triggered_rules = Column(JSON, default=list)
-    
+
+    # Final Unified Score (Max of Rule and ML Score)
+    final_score = Column(Float, default=0.0)

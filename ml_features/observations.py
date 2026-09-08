@@ -70,6 +70,10 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
         'p90d_avg_amount': 0.0,
         'p90d_sum_amount': 0.0,
         'p90d_std_amount': 0.0,
+        
+        # P24H Profile Defaults
+        'txn_count_24h': 0,
+        'velocity_acceleration_24h': 0.0,
     }
     
     # If no history exists, return the defaults instantly (Extreme Cold Start)
@@ -139,5 +143,15 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
         ml_features['p90d_avg_amount'] = round(sum(amounts_90d) / len(amounts_90d), 2)
         ml_features['p90d_std_amount'] = round(float(np.std(amounts_90d, ddof=1)), 2) if len(amounts_90d) > 1 else 0.0
 
+    # --- P24H Calculations (24-Hour Velocity & Acceleration) ---
+    c_24h = txn_time - timedelta(hours=24)
+    amounts_24h = [float(row.amount) for row in history if row.transaction_date >= c_24h]
+    
+    ml_features['txn_count_24h'] = len(amounts_24h)
+    
+    if ml_features['p30d_txn_count'] > 0:
+        ml_features['velocity_acceleration_24h'] = round(ml_features['txn_count_24h'] / (ml_features['p30d_txn_count'] / 30.0), 2)
+    else:
+        ml_features['velocity_acceleration_24h'] = 0.0
 
     return ml_features

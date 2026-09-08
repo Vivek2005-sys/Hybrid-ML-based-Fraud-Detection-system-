@@ -1,0 +1,51 @@
+{
+    "model_name": "Logistic Regression Baseline",
+    "training_date": "2026-09-04 21:22:56",
+    "decision_threshold": 0.2,
+    "feature_cols": [
+        "amount",
+        "is_active_vpn",
+        "is_international",
+        "minutes_since_last_txn_clean",
+        "gap_volatility_5tx_clean",
+        "amount_z_score",
+        "merchant_diversity_7d",
+        "hour_of_day",
+        "is_night_txn",
+        "is_high_risk_category",
+        "p7d_txn_count",
+        "p7d_avg_amount",
+        "p7d_sum_amount",
+        "p7d_std_amount",
+        "p30d_txn_count",
+        "p30d_avg_amount",
+        "p30d_sum_amount",
+        "p30d_std_amount",
+        "p90d_txn_count",
+        "p90d_avg_amount"
+    ],
+    "metrics": {
+        "roc_auc": 0.996,
+        "pr_auc": 0.6299,
+        "precision": 0.2463,
+        "recall": 0.981,
+        "f1_score": 0.3937
+    },
+    "hyperparameters": {
+        "C": "1.0",
+        "class_weight": "balanced",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "None",
+        "max_iter": "1000",
+        "multi_class": "deprecated",
+        "n_jobs": "None",
+        "penalty": "l2",
+        "random_state": "42",
+        "solver": "lbfgs",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+    }
+}
