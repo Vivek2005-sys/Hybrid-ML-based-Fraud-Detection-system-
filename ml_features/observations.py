@@ -154,4 +154,30 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
     else:
         ml_features['velocity_acceleration_24h'] = 0.0
 
+    # ==========================================
+    # 8. DYNAMIC CUSTOM ARTIFACTS
+    # ==========================================
+    try:
+        from app.models import Artifact
+        custom_artifacts = db.query(Artifact).all()
+        for art in custom_artifacts:
+            cutoff_time = txn_time - timedelta(hours=art.lookback_hours)
+            valid_amounts = [float(row.amount) for row in history if row.transaction_date >= cutoff_time]
+            
+            val = 0.0
+            if valid_amounts:
+                agg = art.aggregation.upper()
+                if agg == "COUNT":
+                    val = float(len(valid_amounts))
+                elif agg == "SUM":
+                    val = float(sum(valid_amounts))
+                elif agg == "AVG":
+                    val = float(sum(valid_amounts) / len(valid_amounts))
+                elif agg == "MAX":
+                    val = float(max(valid_amounts))
+            
+            ml_features[art.name] = round(val, 2)
+    except Exception as e:
+        print(f"Error computing dynamic artifacts: {e}")
+
     return ml_features

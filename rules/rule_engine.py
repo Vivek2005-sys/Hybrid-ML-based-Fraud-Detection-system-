@@ -6,17 +6,13 @@ from json_logic import jsonLogic
 from app import models
 from ml_features.observations import get_observation_snapshot
 
-# Load JSON Logic Rules once when the engine starts
-try:
-    with open('./rules/rules.json', 'r') as f:
-        rules_data = json.load(f)
-    RULES = rules_data.get('rules', [])
-    print(f"Rule Engine Online: {len(RULES)} rules loaded.")
-except Exception as e:
-    print(f"Warning: Could not load rules.json: {e}")
-    RULES = []
+# Static RULES loading removed - rules are now dynamically loaded from DB per transaction
 
 def evaluate_transaction(db: Session, txn, txn_time: datetime):
+    # Dynamically fetch active rules from database
+    from app.models import Rule
+    active_rules = db.query(Rule).filter(Rule.is_active == True).all()
+    
     total_score = 0.0
     max_rule_score = 0.0
     triggered_rules = []
@@ -134,25 +130,28 @@ def evaluate_transaction(db: Session, txn, txn_time: datetime):
 
 
     # 2. Evaluate Context Against JSON Rules
-    for rule in RULES:
+    for rule in active_rules:
         try:
-            rule_logic = rule.get('condition', rule.get('logic', {}))
+            # Inject dynamic rule parameters into context for evaluation
+            rule_context["parameters"] = rule.parameters
+            
+            rule_logic = rule.logic
             if jsonLogic(rule_logic, rule_context):
-                score_impact = rule.get('score_impact', rule.get('score', 20.0)) 
+                score_impact = rule.score_impact
                 total_score += score_impact
                 
-                # <-- 2. Update the max_rule_score if this rule is higher
+                # Update the max_rule_score if this rule is higher
                 if score_impact > max_rule_score:
                     max_rule_score = score_impact
                 
                 triggered_rules.append({
-                    "rule_id": rule['rule_id'], 
-                    "rule_name": rule.get('rule_name', rule.get('name', 'Unknown Rule')), 
+                    "rule_id": rule.id, 
+                    "rule_name": rule.rule_name, 
                     "score_impact": score_impact, 
-                    "description": rule['description']
+                    "description": rule.description
                 })
         except Exception as e:
-            print(f"Error evaluating JSON Logic rule {rule.get('rule_id', 'Unknown')}: {e}")
+            print(f"Error evaluating rule {rule.rule_name}: {e}")
 
     # 3. Determine Final Risk Classification
     if total_score >= 60:

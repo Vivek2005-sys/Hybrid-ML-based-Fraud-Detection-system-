@@ -9,3 +9,5 @@ json-logic-qubit
 scikit-learn
 xgboost
 shap
+streamlit
+plotly

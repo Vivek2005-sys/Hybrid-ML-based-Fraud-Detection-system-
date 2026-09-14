@@ -1,5 +1,7 @@
 import json
 import os
+import asyncio
+from app.utils.imap_listener import start_email_poller
 import joblib
 import pandas as pd
 from datetime import datetime, date, timedelta
@@ -24,7 +26,8 @@ from rules import rule_engine
 models.Base.metadata.create_all(bind=database.engine)
 
 # --- ML CHAMPION MODEL & FEATURE CONFIGURATION ---
-FEATURE_COLS = [
+# Default fallback features
+DEFAULT_FEATURE_COLS = [
     'amount', 'is_active_vpn', 'is_international',
     'minutes_since_last_txn_clean', 'gap_volatility_5tx_clean', 'amount_z_score', 'merchant_diversity_7d',
     'hour_of_day', 'is_night_txn', 'is_high_risk_category',
@@ -38,14 +41,25 @@ ml_artifacts: Dict[str, Any] = {}
 
 import shap
 
-# --- FASTAPI LIFESPAN (Load Model Once on Startup) ---
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Attempt to load champion model from root ml_features directory
+def load_ml_artifacts():
     model_path = "ml_features/champion_model.pkl"
+    meta_path = "ml_features/model_metadata.json"
+    
     if not os.path.exists(model_path):
         model_path = "./ml_features/champion_model.pkl"
+        meta_path = "./ml_features/model_metadata.json"
+        
+    # Load Dynamic Features
+    try:
+        with open(meta_path, 'r') as f:
+            meta = json.load(f)
+            ml_artifacts["feature_cols"] = meta.get("feature_cols", DEFAULT_FEATURE_COLS)
+            print(f"✅ Model metadata loaded. Features: {len(ml_artifacts['feature_cols'])}")
+    except Exception as e:
+        print(f"⚠️ Could not load model_metadata.json, falling back to defaults. {e}")
+        ml_artifacts["feature_cols"] = DEFAULT_FEATURE_COLS
 
+    # Load Champion Model
     try:
         ml_artifacts["champion_model"] = joblib.load(model_path)
         print("✅ Champion XGBoost model loaded into RAM successfully.")
@@ -54,13 +68,59 @@ async def lifespan(app: FastAPI):
         ml_artifacts["explainer"] = shap.TreeExplainer(ml_artifacts["champion_model"])
         print("✅ SHAP TreeExplainer initialized successfully.")
     except Exception as e:
-        print(f"⚠️ Warning: Could not load champion_model.pkl or initialize SHAP: {e}")
+        print(f"❌ Warning: Could not load champion_model.pkl or initialize SHAP: {e}")
         ml_artifacts["champion_model"] = None
         ml_artifacts["explainer"] = None
+
+# --- FASTAPI LIFESPAN (Load Model Once on Startup) ---
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    load_ml_artifacts()
+    
+    # Start the background email poller
+    asyncio.create_task(start_email_poller())
+    print("Application Startup Complete - Models Loaded and Email Poller Started")
+
     yield
     ml_artifacts.clear()
 
 app = FastAPI(title="Fraud Detection API", lifespan=lifespan)
+
+@app.get("/model_metadata")
+def get_model_metadata():
+    """Returns the currently loaded ML model metadata for the UI."""
+    meta_path = "ml_features/model_metadata.json"
+    if not os.path.exists(meta_path):
+        meta_path = "./ml_features/model_metadata.json"
+        
+    try:
+        if os.path.exists(meta_path):
+            with open(meta_path, 'r') as f:
+                return {"status": "success", "data": json.load(f)}
+    except Exception as e:
+        logger.error(f"Failed to read metadata: {e}")
+        
+    # Return default fallback if not found
+    return {"status": "success", "data": None}
+
+@app.post("/reload_model")
+def reload_model():
+    """Hot-swaps the XGBoost model in RAM dynamically."""
+    load_ml_artifacts()
+    return {"status": "success", "message": "Model and features reloaded dynamically."}
+
+@app.post("/retrain_model")
+def retrain_model():
+    """Triggers the XGBoost retraining pipeline locally inside the API container."""
+    try:
+        from app.train_xgboost import train_champion_model
+        metadata = train_champion_model()
+        # Automatically reload into memory
+        load_ml_artifacts()
+        return {"status": "success", "message": "Model retrained and hot-swapped successfully.", "metadata": metadata}
+    except Exception as e:
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=str(e))
 
 # --- LOAD RULES DYNAMICALLY ---
 print("Loading JSON Logic Rules from rules.json...")
@@ -99,7 +159,7 @@ class CustomerRequest(BaseModel):
 class TransactionRequest(BaseModel):
     customer_id: int
     amount: float
-    merchant: str
+    txn_type: str
     merchant_category: str
     is_active_vpn: Optional[bool] = False
     is_international: Optional[bool] = False
@@ -187,7 +247,8 @@ def create_transaction(txn: TransactionRequest, db: Session = Depends(get_db)):
     db_txn = models.Transaction(
         customer_id=txn.customer_id,
         amount=txn.amount,
-        merchant=txn.merchant,
+        merchant=f"Merchant_{txn.txn_type}",
+        txn_type=txn.txn_type,
         merchant_category=txn.merchant_category,
         is_active_vpn=txn.is_active_vpn,
         is_international=txn.is_international,
@@ -265,14 +326,15 @@ def score_transaction(txn: TransactionRequest, db: Session = Depends(get_db)):
                     df_input[col] = df_input[col].astype(int)
 
             # [ADDITION 2] Ensure missing expected columns exist and log mismatches
-            missing_cols = [c for c in FEATURE_COLS if c not in df_input.columns]
+            current_feature_cols = ml_artifacts.get("feature_cols", [])
+            missing_cols = [c for c in current_feature_cols if c not in df_input.columns]
             if missing_cols:
                 logger.warning(f"⚠️ Features missing from observations (defaulted to 0.0): {missing_cols}")
                 for col in missing_cols:
                     df_input[col] = 0.0
 
             # Select exact feature set in strict training column order
-            X_input = df_input[FEATURE_COLS].astype(float)
+            X_input = df_input[current_feature_cols].astype(float)
 
             # [ADDITION 3] Predict probability
             probs = ml_model.predict_proba(X_input)
@@ -281,8 +343,13 @@ def score_transaction(txn: TransactionRequest, db: Session = Depends(get_db)):
 
             # [ADDITION 4] Compute SHAP Explainability
             explainer = ml_artifacts.get("explainer")
-            from ml_features.shap_explainer import generate_explanation
-            ml_explanation, ml_narrative = generate_explanation(explainer, X_input, FEATURE_COLS, ml_score, DECISION_THRESHOLD)
+            if explainer:
+                try:
+                    from ml_features.shap_explainer import generate_explanation
+                    ml_explanation, ml_narrative = generate_explanation(explainer, X_input, current_feature_cols, ml_score, DECISION_THRESHOLD)
+                except Exception as e:
+                    logger.error(f"⚠️ SHAP Explanation Failed: {e}")
+                    logger.error(traceback.format_exc())
 
         except Exception as e:
             logger.error(f"❌ ML Prediction Failed: {str(e)}")
@@ -321,7 +388,8 @@ def score_transaction(txn: TransactionRequest, db: Session = Depends(get_db)):
     new_test_score = models.TransactionScore(
         customer_id=txn.customer_id,
         amount=txn.amount,
-        merchant=txn.merchant,
+        merchant=f"Merchant_{txn.txn_type}",
+        txn_type=txn.txn_type,
         merchant_category=txn.merchant_category,
         transaction_date=txn_time,
         is_active_vpn=txn.is_active_vpn,

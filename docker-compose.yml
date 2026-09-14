@@ -24,11 +24,29 @@ services:
     container_name: fraud_fastapi
     ports:
       - "8000:8000"
+    volumes:
+      - ./ml_features:/app/ml_features
     env_file:
       - app/.env
     depends_on:
       db:
         condition: service_healthy
+    restart: always
+  dashboard:
+    build: .
+    container_name: fraud_dashboard
+    command: streamlit run UI/main.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./ml_features:/app/ml_features
+    environment:
+      - DATABASE_URL=postgresql://fraud_user:securepassword@db:5432/fraud_db
+    depends_on:
+      db:
+        condition: service_healthy
+      api:
+        condition: service_started
     restart: always
 
 volumes:

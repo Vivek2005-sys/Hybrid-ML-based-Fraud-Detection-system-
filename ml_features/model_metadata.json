@@ -1,0 +1,30 @@
+{
+    "trained_at": "2026-09-13T14:34:36.019120",
+    "total_records": 1536044,
+    "fraud_records": 6070,
+    "feature_cols": [
+        "amount",
+        "is_active_vpn",
+        "is_international",
+        "minutes_since_last_txn_clean",
+        "gap_volatility_5tx_clean",
+        "amount_z_score",
+        "merchant_diversity_7d",
+        "hour_of_day",
+        "is_night_txn",
+        "is_high_risk_category",
+        "p7d_txn_count",
+        "p7d_avg_amount",
+        "p7d_sum_amount",
+        "p7d_std_amount",
+        "p30d_txn_count",
+        "p30d_avg_amount",
+        "p30d_sum_amount",
+        "p30d_std_amount",
+        "p90d_txn_count",
+        "p90d_avg_amount",
+        "txn_count_1hr",
+        "p14d_txn_count"
+    ],
+    "dynamic_artifacts_included": 2
+}

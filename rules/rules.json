@@ -23,7 +23,7 @@
           {
             "var": "total_amount_30m"
           },
-          10000
+          50000
         ]
       },
       "score": 30.0
@@ -214,20 +214,6 @@
         ]
       },
       "score": 50.0
-    },
-    {
-      "rule_id": "11",
-      "name": "Extreme_24H_Velocity_Acceleration",
-      "description": "Trigger if the 24-hour velocity is more than 10x the customer's normal daily average",
-      "logic": {
-        ">=": [
-          {
-            "var": "velocity_acceleration_24h"
-          },
-          10.0
-        ]
-      },
-      "score": 60.0
     }
   ]
 }

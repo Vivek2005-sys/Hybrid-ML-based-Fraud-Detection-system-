@@ -40,6 +40,7 @@ class Transaction(Base):
     
     amount = Column(Float)
     merchant = Column(String)
+    txn_type = Column(String, default="Credit Card")
     merchant_category = Column(String) # e.g., Groceries, Electronics
     transaction_date = Column(DateTime, default=get_ist_time, index=True)
     
@@ -60,6 +61,7 @@ class TransactionScore(Base):
     customer_id = Column(Integer)
     amount = Column(Float)
     merchant = Column(String)
+    txn_type = Column(String, default="Credit Card")
     merchant_category = Column(String)
     transaction_date = Column(DateTime, default=get_ist_time)
     is_active_vpn = Column(Boolean, default=False)
@@ -74,3 +76,28 @@ class TransactionScore(Base):
 
     # Final Unified Score (Max of Rule and ML Score)
     final_score = Column(Float, default=0.0)
+
+    # Workflow Status
+    status = Column(String, default="OPEN")
+
+class Rule(Base):
+    __tablename__ = "rules"
+
+    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    rule_name = Column(String, unique=True, index=True)
+    description = Column(String)
+    logic = Column(JSON, default=dict)
+    score_impact = Column(Float, default=0.0)
+    parameters = Column(JSON, default=dict)
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=get_ist_time)
+
+class Artifact(Base):
+    __tablename__ = "artifacts"
+    
+    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    name = Column(String, unique=True, index=True)
+    description = Column(String)
+    lookback_hours = Column(Float)
+    aggregation = Column(String) # COUNT, SUM, AVG, MAX
+    created_at = Column(DateTime, default=get_ist_time)
