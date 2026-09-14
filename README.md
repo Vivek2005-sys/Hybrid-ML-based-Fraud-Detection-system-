@@ -81,3 +81,9 @@ For detailed performance metrics and architectural decisions, please refer to:
 * `rules_vs_ml_comparison.md`: Empirical comparison of both engines.
 * `model_performance.md`: Accuracy, Precision, and Recall metrics of the deployed XGBoost model.
 * `mlops_workflow.md`: Overview of the continuous training pipeline.
+
+---
+
+## ?? Future Enhancements
+* **Generative AI Explainability (XAI)**: Integration of a lightweight Local LLM to dynamically translate the XGBoost SHAP impact values into highly contextual, natural-language narratives for fraud investigators.
+* **Graph Database Integration**: Implementing a Graph layer (e.g., Neo4j) to map out complex fraud rings and device-sharing networks across multiple accounts.
