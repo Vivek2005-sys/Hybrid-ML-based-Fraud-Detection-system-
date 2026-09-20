@@ -1,237 +1,209 @@
 {
   "info": {
+    "_postman_id": "38bd86ba-9d79-41d9-bdfd-babd0ada1df0",
     "name": "Fraud Detection API",
-    "description": "Postman collection for testing the Customer and Transaction endpoints.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38001612",
+    "_collection_link": "https://go.postman.co/collection/38001612-38bd86ba-9d79-41d9-bdfd-babd0ada1df0?source=collection_link"
   },
   "item": [
     {
-      "name": "Root (System Status)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            ""
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Ping Database",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"message\": \"Testing database connection\"\n}"
+      "name": "Fraud Detection API",
+      "item": [
+        {
+          "name": "Root (System Status)",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000//",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "",
+                ""
+              ]
+            }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://127.0.0.1:8000/ping",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "ping"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Create Customer",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"name\": \"Vivek Puspalak\",\n  \"persona_type\": \"High Roller\",\n  \"email\": \"vivek@example.com\",\n  \"phone\": \"+919876543210\",\n  \"primary_location\": \"Mumbai\",\n  \"is_active_vpn\": false\n}"
+        {
+          "name": "Create Customer",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": 200,\n\t\"email\": \"vivekpuspalak79@gmail.com\",\n\t\"phone_number\": \"90292585409\",\n\t\"primary_city\": \"Lisatown\",\n\t\"account_creation_date\": \"2026-08-01T22:34:14.575222\",\n\t\"persona_type\": \"Daily Spender\",\n\t\"is_vpn_user\": true,\n\t\"last_name\": \"puspalak\",\n\t\"first_name\": \"vivek\",\n\t\"date_of_birth\": \"1959-06-27\",\n\t\"primary_state\": \"maharashtra\",\n\t\"usual_login_device\": \"Samsung Galaxy S23\"\n}",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/customers",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://127.0.0.1:8000/customers",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "customers"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get All Customers",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/customers",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "customers"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Delete Customer",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/customers/1",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "customers",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Create Transaction",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"customer_id\": 1,\n  \"amount\": 3500.00,\n  \"merchant\": \"Apple Store\",\n  \"merchant_category\": \"Electronics\",\n  \"is_active_vpn\": true,\n  \"is_international\": false\n}"
+        {
+          "name": "Get All Customers",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/customers",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://127.0.0.1:8000/transactions",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "transactions"
-          ]
+        {
+          "name": "Delete Customer",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/customers/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Transaction",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 6012,\n  \"amount\" :100000,\n  \"txn_type\":\"UPI\",\n  \"merchant_category\": \"Luxury Goods\",\n  \"is_active_vpn\": false,\n  \"is_international\": false,\n\t\"transaction_date\":\"2026-09-19 18:00:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/score",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "score"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Transactions",
+          "protocolProfileBehavior": {
+            "followRedirects": true,
+            "disableUrlEncoding": false,
+            "disableCookies": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/score",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "score"
+              ]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
-    },
-    {
-      "name": "Get All Transactions",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/transactions",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "transactions"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get Transaction by ID",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/transactions/YOUR_UUID_HERE",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "transactions",
-            "YOUR_UUID_HERE"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Delete Transaction",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:8000/transactions/YOUR_UUID_HERE",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "8000",
-          "path": [
-            "transactions",
-            "YOUR_UUID_HERE"
-          ]
-        }
-      },
-      "response": []
+      ],
+      "description": "Postman collection for testing the Customer and Transaction endpoints."
     }
   ]
 }
