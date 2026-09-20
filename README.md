@@ -4,7 +4,7 @@ A modern, containerized Fraud Detection platform that combines a deterministic *
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * **Hybrid Scoring Engine**: Evaluates transactions using hard-coded business rules alongside behavioral ML models, dramatically reducing false positives and catching evasive fraud that rules miss.
 * **Live Case Management Dashboard**: A professional, multi-page Streamlit UI for investigators to monitor live traffic, review customer history, and manage the alert queue (Approve/Block/Claim).
@@ -14,7 +14,7 @@ A modern, containerized Fraud Detection platform that combines a deterministic *
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Backend API**: FastAPI (Python)
 * **Frontend UI**: Streamlit
@@ -24,7 +24,7 @@ A modern, containerized Fraud Detection platform that combines a deterministic *
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── app/                  # FastAPI backend application & DB models
@@ -39,7 +39,7 @@ A modern, containerized Fraud Detection platform that combines a deterministic *
 
 ---
 
-## ⚙️ Getting Started (How to Run)
+## Getting Started (How to Run)
 
 ### 1. Prerequisites
 * **Docker Desktop** installed and running.
@@ -54,11 +54,9 @@ docker-compose up -d --build
 ### 3. Access the Services
 * **Investigator Dashboard (Streamlit)**: `http://localhost:8501`
 * **API Documentation (Swagger UI)**: `http://localhost:8000/docs`
-* **PostgreSQL Database**: `localhost:5433` (User: `fraud_user`, Pass: `securepassword`, DB: `fraud_db`)
-
 ---
 
-## 🧪 Testing with Postman
+##  Testing with Postman
 
 To test the live system, a fully configured Postman collection is included in the project root: `Fraud_Detection_API.postman_collection.json`.
 
@@ -76,11 +74,11 @@ Once you send a suspicious transaction from Postman, switch over to your Streaml
 
 ---
 
-## 📊 Documentation
+##  Documentation
 For detailed performance metrics and architectural decisions, please refer to:
 * `rules_vs_ml_comparison.md`: Empirical comparison of both engines.
 * `model_performance.md`: Accuracy, Precision, and Recall metrics of the deployed XGBoost model.
-* `mlops_workflow.md`: Overview of the continuous training pipeline.
+
 
 ---
 
