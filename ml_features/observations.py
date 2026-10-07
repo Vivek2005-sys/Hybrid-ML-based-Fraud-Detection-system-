@@ -8,8 +8,7 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
     Real-time Observation Engine
     Calculates ML features on the fly for incoming transactions and handles Cold Starts gracefully.
     """
-    # 1. Fetch a bounded recent history (Limit 50 is plenty for a 7-day lookback)
-    # Note: Change 'transaction_scores' to your actual raw table name if different
+
     # 1. Define the 90-day cutoff
     cutoff_90d = txn_time - timedelta(days=90)
     query = text("""
@@ -39,7 +38,7 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
     history = db.execute(query, {
         "cust_id": customer_id, 
         "time": txn_time,
-        "cutoff_90d": cutoff_90d  # <-- This is the missing piece!
+        "cutoff_90d": cutoff_90d  
     }).fetchall()
     
     
@@ -108,9 +107,7 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
     ml_features['merchant_diversity_7d'] = len(recent_merchants)
 
 
-    # ==========================================
     # 7. CALCULATE ROLLING PROFILE WINDOWS (Excluding Current Transaction)
-    # ==========================================
     
     # Define window cutoffs relative to txn_time
     c_7d = txn_time - timedelta(days=7)
@@ -154,7 +151,7 @@ def get_observation_snapshot(db: Session, customer_id: int, current_amount: floa
     else:
         ml_features['velocity_acceleration_24h'] = 0.0
 
-    # ==========================================
+
     # 8. DYNAMIC CUSTOM ARTIFACTS
     # ==========================================
     try:

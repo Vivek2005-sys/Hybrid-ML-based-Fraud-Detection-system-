@@ -1,0 +1,15 @@
+customer_id,amount,txn_type,merchant_category,is_active_vpn,is_international,transaction_date
+1001,50.0,UPI,Food & Dining,false,false,2026-07-10T10:00:00Z
+1001,120.0,UPI,Groceries,false,false,2026-07-25T14:30:00Z
+1001,75.0,UPI,Food & Dining,false,false,2026-08-15T09:15:00Z
+1001,90.0,UPI,Transport,false,false,2026-09-01T18:45:00Z
+1001,60.0,UPI,Groceries,false,false,2026-09-15T11:20:00Z
+1001,45.0,UPI,Food & Dining,false,false,2026-09-18T19:00:00Z
+1001,85.0,UPI,Entertainment,false,false,2026-09-19T20:10:00Z
+2002,8500.0,Credit Card,Financial Services,false,false,2026-07-12T10:00:00Z
+2002,12000.0,Wire Transfer,B2B Services,false,false,2026-07-28T14:30:00Z
+2002,7500.0,Credit Card,Travel,false,false,2026-08-18T09:15:00Z
+2002,9000.0,Credit Card,Retail,false,false,2026-09-05T18:45:00Z
+2002,11000.0,Wire Transfer,Financial Services,false,false,2026-09-12T11:20:00Z
+2002,8000.0,Credit Card,Travel,false,false,2026-09-17T19:00:00Z
+2002,9500.0,Credit Card,Financial Services,false,false,2026-09-19T10:10:00Z

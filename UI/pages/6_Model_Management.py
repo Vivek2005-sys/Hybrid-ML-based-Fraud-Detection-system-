@@ -45,7 +45,7 @@ c1, c2 = st.columns([1, 1])
 
 with c1:
     with st.container(border=True, height=500):
-        st.markdown("### 🏆 Active Champion Model")
+        st.markdown("### Active Champion Model")
         
         try:
             resp = requests.get("http://api:8000/model_metadata", timeout=5)
@@ -66,7 +66,7 @@ with c1:
 
 with c2:
     with st.container(border=True, height=500):
-        st.markdown("### 🚀 Automated Retraining Pipeline")
+        st.markdown("### Automated Retraining Pipeline")
         st.write("Triggering this pipeline will run `app/train_xgboost.py`. It will dynamically backfill all your newly created UI Artifacts into historical transaction data, train a new XGBoost model, and instantly hot-swap it in the API.")
         
         st.divider()

@@ -46,7 +46,7 @@ st.markdown("<div class='main-header'>Rule Configurator</div>", unsafe_allow_htm
 
 @st.cache_resource
 def get_engine():
-    return create_engine(os.getenv("DATABASE_URL", "postgresql://fraud_user:securepassword@db:5432/fraud_db"))
+    return create_engine(os.getenv("DATABASE_URL", "postgresql+psycopg2://fraud_user:securepassword@db:5432/fraud_db"))
 
 engine = get_engine()
 

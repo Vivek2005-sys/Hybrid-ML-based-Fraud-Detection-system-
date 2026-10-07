@@ -8,18 +8,18 @@ Here is the empirical evidence for the project report:
 
 ## 1. Performance Results
 
-| Metric | Rule Engine | XGBoost ML Model |
-| :--- | :--- | :--- |
-| **Total Frauds Tested** | 100 | 100 |
-| **Frauds Caught (Recall)** | 0 (0.00%) | 100 (100.00%) |
-| **Legitimate Transactions Tested** | 400 | 400 |
-| **False Positives** | 0 | 0 |
+| Metric                             | Rule Engine | XGBoost ML Model |
+| :--------------------------------- | :---------- | :--------------- |
+| **Total Frauds Tested**            | 100         | 100              |
+| **Frauds Caught (Recall)**         | 21 (21.00%) | 100 (100.00%)    |
+| **Legitimate Transactions Tested** | 400         | 400              |
+| **False Positives**                | 0           | 0                |
 
 ---
 
 ## 2. Why the Rule Engine Failed (The "Evasive Fraud" Problem)
 
-The Rule Engine caught **zero** of the recent fraud attacks. This happens because modern fraud rings employ **evasive techniques** designed specifically to bypass hard-coded rules. 
+Even after optimizing the Rule Engine to evaluate cumulative risk (summing all triggered rules), it caught only **21%** of the recent fraud attacks, completely missing 79 evasive attacks. This happens because modern fraud rings employ **evasive techniques** designed specifically to bypass hard-coded rules. 
 
 For example, our rules might have a trigger: `If Amount > $50,000 THEN Block`.
 
@@ -34,7 +34,7 @@ Because these amounts fall strictly below the hard-coded `$50,000` threshold or 
 
 ## 3. Why Machine Learning is Superior
 
-The XGBoost model caught **100%** of the exact same evasive transactions (outputting ~99.9% fraud probability) without triggering any false positives on the 400 legitimate transactions.
+The XGBoost model caught **100%** of all attacks, successfully identifying all **79 evasive transactions** that slipped past the optimized Rule Engine, without triggering any false positives on the 400 legitimate transactions.
 
 ### A. Non-Linear Behavioral Analysis
 Instead of looking at the transaction amount in a vacuum, the ML model looks at **contextual feature profiles**. It calculates the Z-Score (how many standard deviations the `$4,775` is from the customer's personal average), velocity volatility, and time gaps. 

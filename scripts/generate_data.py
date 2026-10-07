@@ -42,7 +42,7 @@ def generate_customers(num_customers=3000):
         customer_data = {
             "first_name": fake.first_name(),
             "last_name": fake.last_name(),
-            "email": fake.unique.email(),
+            "email": fake.email(),
             "phone_number": fake.phone_number(),
             "date_of_birth": fake.date_of_birth(minimum_age=18, maximum_age=80),
             "primary_city": fake.city(),

@@ -66,8 +66,8 @@ def run_comparison():
         try:
             total_score, max_rule_score, risk_level, current_velocity, triggered_rules, observations = rule_engine.evaluate_transaction(db, txn, txn.transaction_date)
             
-            # Rule Decision: We consider it 'caught' by rules if max_rule_score >= 100
-            rule_is_fraud = 1 if max_rule_score >= 100 else 0
+            # Rule Decision: We consider it 'caught' by rules if the SUM of all triggered rules (total_score) >= 100
+            rule_is_fraud = 1 if total_score >= 100 else 0
             
             # 2. Run ML
             flat_features = {

@@ -18,7 +18,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from json_logic import jsonLogic
-
+import shap
 from . import models, database
 from rules import rule_engine
 
@@ -39,7 +39,6 @@ DEFAULT_FEATURE_COLS = [
 DECISION_THRESHOLD = 0.20
 ml_artifacts: Dict[str, Any] = {}
 
-import shap
 
 def load_ml_artifacts():
     model_path = "ml_features/champion_model.pkl"

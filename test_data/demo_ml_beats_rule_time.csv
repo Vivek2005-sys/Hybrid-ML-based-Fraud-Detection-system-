@@ -1,0 +1,7 @@
+customer_id,amount,merchant,txn_type,merchant_category,is_active_vpn,is_international,transaction_date
+2002,500.0,Zara,Credit Card,Retail,false,false,2026-10-01 13:00:00
+2002,1200.0,Big Bazaar,UPI,Groceries,false,false,2026-10-03 15:30:00
+2002,800.0,Uber,UPI,Transport,false,false,2026-10-05 18:00:00
+2002,99.0,Steam Games,Credit Card,Gaming,false,false,2026-10-06 03:10:00
+2002,99.0,Steam Games,Credit Card,Gaming,false,false,2026-10-06 03:11:00
+2002,150.0,Steam Games,Credit Card,Gaming,false,false,2026-10-06 03:12:00

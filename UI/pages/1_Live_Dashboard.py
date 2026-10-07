@@ -52,7 +52,7 @@ with col_f4:
 
 @st.cache_resource
 def get_engine():
-    return create_engine(os.getenv("DATABASE_URL", "postgresql://fraud_user:securepassword@localhost:5433/fraud_db"))
+    return create_engine(os.getenv("DATABASE_URL", "postgresql+psycopg2://fraud_user:securepassword@localhost:5433/fraud_db"))
 
 @st.fragment(run_every="3s")
 def render_live_dashboard():
@@ -107,7 +107,7 @@ def render_live_dashboard():
     # LEFT CONTAINER: Live Transactions Log Table
     with col_left:
         with st.container(height=650, border=True):
-            st.markdown(f"#### 📋 Live Transactions (Recent 50) 🟢 Live")
+            st.markdown(f"####  Live Transactions")
             
             selected_event = st.dataframe(
                 df_scores[[
@@ -123,7 +123,7 @@ def render_live_dashboard():
                     "merchant_category": "Class",
                     "transaction_date": "Time",
                     "txn_type": "Txn Type",
-                    "amount": st.column_config.NumberColumn("Amount", format="$%.2f"),
+                    "amount": st.column_config.NumberColumn("Amount", format="₹%.2f"),
                     "total_risk_score": "Score",
                     "final_action": "Action"
                 }
@@ -132,7 +132,7 @@ def render_live_dashboard():
     # RIGHT CONTAINER: Decision Details Inspector
     with col_right:
         with st.container(height=650, border=True):
-            st.markdown("#### 🔍 Decision Details")
+            st.markdown("#### Decision Details")
             
             selected_rows = selected_event.get("selection", {}).get("rows", [])
             
@@ -151,11 +151,11 @@ def render_live_dashboard():
                 with kpi2:
                     action = txn_data['final_action']
                     if action == "BLOCK":
-                        st.error("🚫 BLOCK")
+                        st.error("BLOCK")
                     elif action == "REVIEW":
-                        st.warning("⚠️ REVIEW")
+                        st.warning("REVIEW")
                     else:
-                        st.success("✅ ALLOW")
+                        st.success("ALLOW")
                 
                 st.markdown(f"**Max Rule Score:** `{txn_data['max_rule_score']}` | **ML Fraud Score:** `{txn_data['ml_fraud_score']:.4f}`")
                 st.write(f"**VPN Active:** {'Yes' if txn_data['is_active_vpn'] else 'No'} | **International:** {'Yes' if txn_data['is_international'] else 'No'}")
@@ -163,7 +163,7 @@ def render_live_dashboard():
                 st.divider()
                 
                 st.markdown("##### ML Narrative (Explainability)")
-                st.info(f"🤖 {txn_data.get('ml_narrative', 'No ML narrative generated.')}")
+                st.info(f"{txn_data.get('ml_narrative', 'No ML narrative generated.')}")
                 
                 st.divider()
                 st.markdown("##### Triggered Rules & Anomaly Audit Log")

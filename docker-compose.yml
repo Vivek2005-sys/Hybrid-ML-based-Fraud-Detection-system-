@@ -28,6 +28,8 @@ services:
       - ./ml_features:/app/ml_features
     env_file:
       - app/.env
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://fraud_user:securepassword@db:5432/fraud_db
     depends_on:
       db:
         condition: service_healthy
@@ -41,7 +43,7 @@ services:
     volumes:
       - ./ml_features:/app/ml_features
     environment:
-      - DATABASE_URL=postgresql://fraud_user:securepassword@db:5432/fraud_db
+      - DATABASE_URL=postgresql+psycopg2://fraud_user:securepassword@db:5432/fraud_db
     depends_on:
       db:
         condition: service_healthy

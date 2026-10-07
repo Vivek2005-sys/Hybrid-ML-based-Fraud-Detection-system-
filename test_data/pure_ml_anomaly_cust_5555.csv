@@ -1,0 +1,12 @@
+customer_id,amount,merchant,merchant_category,is_active_vpn,is_international,transaction_date
+5555,490.00,Local Grocery,Groceries,0,0,2026-07-22 12:00:00.000000
+5555,510.00,Local Grocery,Groceries,0,0,2026-07-23 12:00:00.000000
+5555,500.00,Local Grocery,Groceries,0,0,2026-07-24 12:00:00.000000
+5555,480.00,Local Grocery,Groceries,0,0,2026-07-25 12:00:00.000000
+5555,520.00,Local Grocery,Groceries,0,0,2026-07-26 12:00:00.000000
+5555,500.00,Local Grocery,Groceries,0,0,2026-07-27 12:00:00.000000
+5555,490.00,Local Grocery,Groceries,0,0,2026-07-28 12:00:00.000000
+5555,510.00,Local Grocery,Groceries,0,0,2026-07-29 12:00:00.000000
+5555,500.00,Local Grocery,Groceries,0,0,2026-07-30 12:00:00.000000
+5555,500.00,Local Grocery,Groceries,0,0,2026-07-31 12:00:00.000000
+5555,2950.00,Unknown Retailer,Retail,0,0,2026-08-01 12:00:00.000000

@@ -1,0 +1,5 @@
+error debugging 
+1. logs from api
+docker logs fraud_fastapi --tail 50
+2.Dashboard logs
+docker logs fraud_dashboard --tail 50

@@ -1,0 +1,8 @@
+customer_id,amount,merchant,txn_type,merchant_category,is_active_vpn,is_international,transaction_date
+10017,300.0,Shell,UPI,Fuel,false,false,2026-10-10 08:30:00
+10017,800.0,Big Bazaar,UPI,Groceries,false,false,2026-10-11 19:15:00
+10017,450.0,Uber,UPI,Transport,false,false,2026-10-12 18:00:00
+10017,500.0,Unknown WebStore,Credit Card,Retail,false,false,2026-10-14 14:00:00
+10017,450.0,Random Tech,Credit Card,Retail,false,false,2026-10-14 14:02:00
+10017,490.0,Crypto Exchange,Credit Card,Financial Services,false,false,2026-10-14 14:04:00
+10017,550.0,Gaming Site,Credit Card,Gaming,false,false,2026-10-14 14:06:00

@@ -1,7 +1,7 @@
 {
-    "trained_at": "2026-09-13T14:34:36.019120",
-    "total_records": 1536044,
-    "fraud_records": 6070,
+    "trained_at": "2026-10-03T15:51:11.441787",
+    "total_records": 1532589,
+    "fraud_records": 5989,
     "feature_cols": [
         "amount",
         "is_active_vpn",
@@ -23,8 +23,7 @@
         "p30d_std_amount",
         "p90d_txn_count",
         "p90d_avg_amount",
-        "txn_count_1hr",
         "p14d_txn_count"
     ],
-    "dynamic_artifacts_included": 2
+    "dynamic_artifacts_included": 1
 }

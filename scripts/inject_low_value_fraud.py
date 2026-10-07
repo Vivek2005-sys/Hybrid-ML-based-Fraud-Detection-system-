@@ -4,20 +4,10 @@ inject_low_value_fraud.py
 Adds a NEW fraud archetype - "Low-Value Evasive Fraud" - directly into
 your EXISTING transactions table, without regenerating the 1.5M-row
 dataset from scratch. Calibrates each injected transaction to the
-VICTIM'S OWN real historical average (pulled live from the database),
-exactly mirroring the customer 3726 test case (small absolute amount,
-extreme personal z-score) that revealed the training data gap.
-
-USAGE:
-    python inject_low_value_fraud.py
-
-AFTER RUNNING THIS:
-    1. Rerun your training_features CREATE TABLE AS query (the one from
-       Week 4/5) to pick up these new rows - window functions need full
-       recomputation, but you're rerunning existing SQL, not regenerating
-       raw data.
-    2. Retrain your models.
+VICTIM'S OWN real historical average (pulled live from the database)
 """
+
+
 
 import random
 import uuid

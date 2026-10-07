@@ -1,0 +1,6 @@
+customer_id,amount,merchant,txn_type,merchant_category,is_active_vpn,is_international,transaction_date
+10016,15000.0,Taj Hotels,Credit Card,Hotels,false,false,2026-10-10 18:30:00
+10016,8000.0,Apple Store,Credit Card,Retail,false,false,2026-10-11 14:15:00
+10016,25000.0,Emirates,Credit Card,Airlines,false,false,2026-10-12 09:00:00
+10016,5000.0,Zara,Credit Card,Retail,false,false,2026-10-13 16:45:00
+10016,250000.0,Offshore Crypto,Wire,Financial Services,true,true,2026-10-14 02:00:00

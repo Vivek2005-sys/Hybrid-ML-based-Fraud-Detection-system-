@@ -17,10 +17,12 @@ except ImportError:
     SENDER_EMAIL = ""
     SENDER_PASSWORD = ""
 
-DB_URL = os.getenv("DATABASE_URL", "postgresql://fraud_user:securepassword@db:5432/fraud_db")
+DB_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://fraud_user:securepassword@db:5432/fraud_db")
 
 def connect_db():
-    return psycopg2.connect(DB_URL)
+    # psycopg2.connect() requires 'postgresql://' not 'postgresql+psycopg2://'
+    clean_url = DB_URL.replace("postgresql+psycopg2://", "postgresql://")
+    return psycopg2.connect(clean_url)
 
 def process_unread_emails():
     if not SENDER_EMAIL or not SENDER_PASSWORD:

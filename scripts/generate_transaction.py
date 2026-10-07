@@ -10,7 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from app.database import SessionLocal, engine
 from app import models
 
-# --- THE SEED FIX ---
+
 random.seed(42)
 uuid.UUID(int=random.getrandbits(128), version=4)
 
@@ -56,18 +56,40 @@ def generate_transactions():
             avg_amt, amt_variance = 5000.0, 3000.0
             categories = ["Airlines", "Luxury Goods", "Hotels", "Fine Dining"]
 
+        # Define minimum realistic amounts (in Rupees) for each category
+        CATEGORY_MIN_AMOUNTS = {
+            "Fuel": 100.0,
+            "Utilities": 200.0,
+            "Groceries": 50.0,
+            "Food Delivery": 100.0,
+            "Streaming": 99.0,
+            "Transport": 40.0,
+            "Gaming": 20.0,
+            "Retail": 100.0,
+            "Airlines": 2500.0,
+            "Luxury Goods": 5000.0,
+            "Hotels": 1500.0,
+            "Fine Dining": 800.0
+        }
+
         # --- 2. GENERATE NORMAL BASELINE (97%) ---
         customer_txns = []
         for _ in range(annual_count):
             txn_date = random_date(start_date, end_date)
-            amount = max(2.0, random.gauss(avg_amt, amt_variance))
+            category = random.choice(categories)
+            
+            # Look up the realistic minimum for this category (fallback to 50 if missing)
+            min_allowed = CATEGORY_MIN_AMOUNTS.get(category, 50.0)
+            
+            # Generate amount, ensuring it never drops below the realistic minimum
+            amount = max(min_allowed, random.gauss(max(avg_amt, min_allowed + 20), amt_variance))
             
             customer_txns.append({
                 "id": str(uuid.uuid4()),
                 "customer_id": customer.id,
                 "amount": round(amount, 2),
                 "merchant": f"Merchant_{random.randint(1, 100)}",
-                "merchant_category": random.choice(categories),
+                "merchant_category": category,
                 "transaction_date": txn_date,
                 "is_active_vpn": customer.is_vpn_user, 
                 "is_international": random.choices([True, False], weights=[5, 95])[0],

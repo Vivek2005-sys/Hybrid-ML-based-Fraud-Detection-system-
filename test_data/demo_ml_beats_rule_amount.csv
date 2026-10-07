@@ -1,0 +1,7 @@
+customer_id,amount,merchant,txn_type,merchant_category,is_active_vpn,is_international,transaction_date
+2002,45,Local Cafe,UPI,Food Delivery,FALSE,FALSE,01-10-2026 10:00
+2002,30,Metro,UPI,Transport,FALSE,FALSE,02-10-2026 08:30
+2002,60,Bookstore,UPI,Retail,FALSE,FALSE,03-10-2026 14:00
+2002,100,Stationary,UPI,Grocieries,FALSE,FALSE,03-10-2026 17:00
+2002,25,Snack Shop,UPI,Food Delivery,FALSE,FALSE,04-10-2026 11:15
+2002,3500,Bank,Credit Card,Financial Services,FALSE,FALSE,05-10-2026 16:00

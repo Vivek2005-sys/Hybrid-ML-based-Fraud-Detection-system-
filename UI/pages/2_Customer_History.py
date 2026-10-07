@@ -36,7 +36,7 @@ with search_col:
 
 @st.cache_resource
 def get_engine():
-    return create_engine(os.getenv("DATABASE_URL", "postgresql://fraud_user:securepassword@localhost:5433/fraud_db"))
+    return create_engine(os.getenv("DATABASE_URL", "postgresql+psycopg2://fraud_user:securepassword@localhost:5433/fraud_db"))
 
 if customer_id_query:
     engine = get_engine()
@@ -80,7 +80,7 @@ if customer_id_query:
                     st.metric("Total Alerts ⚠️", total_alerts)
             with kpi3:
                 with st.container(border=True):
-                    st.metric("Total Spend 📈", f"${total_spend:,.2f}")
+                    st.metric("Total Spend 📈", f"₹{total_spend:,.2f}")
             
             st.write("") # Spacer
             
@@ -101,7 +101,7 @@ if customer_id_query:
                         column_config={
                             "transaction_date": "Date",
                             "txn_type": "Merchant",
-                            "amount": st.column_config.NumberColumn("Amount", format="$%.2f"),
+                            "amount": st.column_config.NumberColumn("Amount", format="₹%.2f"),
                             "total_risk_score": "Risk Score",
                             "final_action": "Status"
                         }

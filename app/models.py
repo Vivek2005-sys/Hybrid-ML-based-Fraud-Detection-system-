@@ -31,7 +31,7 @@ class Customer(Base):
     
     
     
-# 2. The Updated Transaction Table
+# 2. The Transaction Table
 class Transaction(Base):
     __tablename__ = "transactions"
     
@@ -51,7 +51,7 @@ class Transaction(Base):
     
     customer = relationship("Customer", back_populates="transactions")
 
-
+# The live transaction table
 class TransactionScore(Base):
     __tablename__ = "transaction_scores"
 
@@ -80,6 +80,7 @@ class TransactionScore(Base):
     # Workflow Status
     status = Column(String, default="OPEN")
 
+# Rules Table 
 class Rule(Base):
     __tablename__ = "rules"
 
@@ -92,6 +93,7 @@ class Rule(Base):
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=get_ist_time)
 
+# The artifacts - observations and profiles
 class Artifact(Base):
     __tablename__ = "artifacts"
     

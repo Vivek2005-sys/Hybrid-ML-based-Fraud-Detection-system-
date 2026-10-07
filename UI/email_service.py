@@ -27,7 +27,7 @@ def send_verification_email(customer_email, customer_name, transaction_id, amoun
         
         <div style="background-color: #f8f9fa; padding: 15px; border-left: 4px solid #dc3545; margin: 20px 0;">
             <b>Transaction Type:</b> {txn_type}<br>
-            <b>Amount:</b> ${amount:,.2f}<br>
+            <b>Amount:</b> ₹{amount:,.2f}<br>
             <b>Transaction ID:</b> {transaction_id}
         </div>
         

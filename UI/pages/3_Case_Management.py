@@ -41,7 +41,7 @@ st.markdown("<div class='main-header'>Case Management</div>", unsafe_allow_html=
 
 @st.cache_resource
 def get_engine():
-    return create_engine(os.getenv("DATABASE_URL", "postgresql://fraud_user:securepassword@db:5432/fraud_db"))
+    return create_engine(os.getenv("DATABASE_URL", "postgresql+psycopg2://fraud_user:securepassword@db:5432/fraud_db"))
 
 engine = get_engine()
 
@@ -96,7 +96,7 @@ with col_queue:
                 selection_mode="multi-row",
                 column_config={
                     "short_id": "Txn ID",
-                    "amount": st.column_config.NumberColumn("Amount", format="$%.0f"),
+                    "amount": st.column_config.NumberColumn("Amount", format="₹%.0f"),
                     "total_risk_score": "Risk"
                 }
             )
@@ -241,7 +241,7 @@ with col_summary:
                 st.write(f"**Transaction ID:** `{case_id}`")
                 st.write(f"**Date:** {case_data['transaction_date']}")
                 st.write(f"**Transaction Type:** {case_data['txn_type']}")
-                st.write(f"**Amount:** ${case_data['amount']:,.2f}")
+                st.write(f"**Amount:** ₹{case_data['amount']:,.2f}")
                 
             with tab3:
                 results = case_data.get('results', {})
