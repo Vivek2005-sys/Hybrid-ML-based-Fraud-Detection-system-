@@ -82,6 +82,8 @@ For detailed performance metrics and architectural decisions, please refer to:
 
 ---
 
-## ?? Future Enhancements
+## Future Enhancements
+* **Robust ETL Data Pipeline**: Architecting a scalable ETL (Extract, Transform, Load) pipeline using tools like Apache Airflow or Kafka for high-throughput, real-time data ingestion and continuous ML model retraining.
+* **Payment-Modality Feature Engineering**: Building specialized ML features based on 	rxn_type (e.g., Credit Card, Debit Card, UPI). This will allow the model to apply weighted attention mechanisms to high-risk vectors, such as Credit Card transactions, which exhibit unique fraud topologies.
 * **Generative AI Explainability (XAI)**: Integration of a lightweight Local LLM to dynamically translate the XGBoost SHAP impact values into highly contextual, natural-language narratives for fraud investigators.
 * **Graph Database Integration**: Implementing a Graph layer (e.g., Neo4j) to map out complex fraud rings and device-sharing networks across multiple accounts.
