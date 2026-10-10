@@ -1,4 +1,4 @@
-# AI-Powered Hybrid Fraud Detection System
+# Hybrid Machine Learning Fraud Detection System
 
 A modern, containerized Fraud Detection platform that combines a deterministic **Rule-Based Engine** with an advanced **Machine Learning (XGBoost) Model** to detect both obvious and evasive financial fraud in real-time.
 
@@ -65,6 +65,7 @@ To test the live system, a fully configured Postman collection is included in th
 * Click **Import** and select the `Fraud_Detection_API.postman_collection.json` file from the repository.
 
 **2. Send Test Transactions**
+* Onboard the customer through (`POST /customer`) endpoint.
 * Select the **Score Transaction** (`POST /score`) endpoint.
 * Send a JSON payload containing transaction details like `amount`, `txn_type` (e.g., `"UPI"` or `"Credit Card"`), and `customer_id`.
 * The Hybrid Engine will instantly analyze the payload, run the XGBoost model, evaluate the Rule Engine, and return a risk assessment (`ALLOW`, `REVIEW`, or `BLOCK`).
